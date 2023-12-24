@@ -24,4 +24,15 @@ require_once './app/views/noticiasView.php';
             $this->noticiasView->showNoticias();
         }
 
+        public function getTemporadas() {
+            $allTemporadas = $this->temporadasModel->getAllTemporadas();
+            $this->temporadasView->showAllTemporadas($allTemporadas);
+        }
+
+        //public function showTemporadaById($id) {
+        //    $temporadaById = $this->temporadasModel->getTemporadaById($id);
+        //    $allTemporadas = $this->temporadasModel->getAllTemporadas();
+        //    $this->temporadasView->temporadaById($temporadaById, $allTemporadas, $id);
+        //}
+
     }

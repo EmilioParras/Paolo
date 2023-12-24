@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <base href="{BASE_URL}">
-    <link rel="icon" href="/images/iconoPaolo.webp">
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbol Champagne a lo Paolo Guerrero</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Just Us Store</title>
 </head>
+
 
 <header>
   <!-- Navbar -->
@@ -28,45 +27,38 @@
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
-            <a class="nav-link text-black" aria-current="page" href="inicio">Inicio</a>
+            <a class="nav-link text-black" aria-current="page" href="noticias">Noticias</a>
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <a class="btn dropdown-toggle" href="inicio" role="button" data-bs-toggle="dropdown" aria-expanded="false">Zapatillas </a>
+              <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tabla</a>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                {foreach from=$categorias item=$categoria} 
-                  <li><a class="dropdown-item" href="categoria/{$categoria->id}">{$categoria->nombreCategoria}</a></li>
-                {/foreach} 
+                  <li><a class="dropdown-item" href="tablaActual">Tabla actual</a></li>
+                  <li><a class="dropdown-item" href="tablaJugadoresActual">Tabla Estadisticas</a></li>
               </ul>
             </div>
           </li>
-            {if !$email}    
-              <li class="nav-item">
-                <a class="nav-link text-black" aria-current="page" href="iniciar-sesion">Login</a>
-              </li>
-            {else}
-              <li class="nav-item ml-auto">
-                <a class="nav-link" aria-current="page" href="logout">Logout - {$email} </a>
-              </li>
-            {/if}
-            {if $email}
               <div class="dropdown">
-                  <a class="btn dropdown-toggle" href="inicio" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin Table</a>
+                  <a class="btn dropdown-toggle" href="inicio" role="button" data-bs-toggle="dropdown" aria-expanded="false">Temporadas</a>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li class="nav-item"><a class="nav-link text-black" href="tabla-administrador-zapatillas">Tabla administrador de zapatillas</a></li>
-                    <li class="nav-item"><a class="nav-link text-black" href="tabla-administrador-categorias">Tabla administrador de categorias</a></li>
-                  </ul>
+                    {foreach from=$temporadas item=$temporada}
+                      <li class="nav-item"><a class="nav-link text-black" href="temporada/{$temporada->id}">Temporada {$temporada->numeroTemporada}</a></li>
+                    {/foreach}  
+                    </ul>
               </div>
-            {/if}  
+          <li class="nav-item active">
+            <a class="nav-link text-black" aria-current="page" href="noticias">Jugadores</a>
+          </li>
           </ul>
-          <a><img class="d-flex mx-3" width="70px" height="70px" src="./imagenes/icon.png" alt="icono"></a>
+          
+          <a><img class="d-flex mx-3" width="70px" height="70px" src="/images/iconoPaolo.jpg" alt="iconoPaolo"></a>
       </div>
     </div>
   </nav>
   <!-- Navbar -->
 
   <div class="p-5 text-center bg-light shadow-lg p-3 mb-5 bg-body rounded">
-    <h1 class="display-1 mb-3 text-black">Just Us Store</h1>
+    <h1 class="display-1 mb-3 text-black">Futbol Champagne a lo Paolo Guerrero</h1>
   </div>
   
 </header>
