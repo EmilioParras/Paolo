@@ -33,21 +33,21 @@
             <div class="dropdown">
               <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tabla</a>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="tablaActual">Tabla actual</a></li>
-                  <li><a class="dropdown-item" href="tablaJugadoresActual">Tabla Estadisticas</a></li>
+                  <li><a class="dropdown-item" href="tabla">Tabla actual</a></li>
+                  <li><a class="dropdown-item" href="estadisticas">Tabla Estadisticas</a></li>
               </ul>
             </div>
           </li>
               <div class="dropdown">
                   <a class="btn dropdown-toggle" href="inicio" role="button" data-bs-toggle="dropdown" aria-expanded="false">Temporadas</a>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
                     {foreach from=$temporadas item=$temporada}
-                      <li class="nav-item"><a class="nav-link text-black" href="temporada/{$temporada->id}">Temporada {$temporada->numeroTemporada}</a></li>
+                      <li class="nav-item"><a class="nav-link text-black d-flex" href="temporada/{$temporada->ID}">Temporada {$temporada->numeroTemporada}</a></li>
                     {/foreach}  
-                    </ul>
+                    </ul> 
               </div>
           <li class="nav-item active">
-            <a class="nav-link text-black" aria-current="page" href="noticias">Jugadores</a>
+            <a class="nav-link text-black" aria-current="page" href="jugadores">Jugadores</a>
           </li>
           </ul>
           

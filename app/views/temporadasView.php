@@ -10,9 +10,10 @@ require_once './libs/smarty-4.3.4/libs/Smarty.class.php';
             $this->smarty = new Smarty();
         }
 
-        public function showAllTemporadas($allTemporadas) {
-            $this->smarty->assign('temporadas', $allTemporadas);
-            $this->smarty->display('templates/header.tpl');
-        }
+       public function showHome($allTemporadas) {
+        $this->smarty->assign('temporadas', $allTemporadas);
+        $this->smarty->display('templates/header.tpl');
+        $this->smarty->display('templates/noticiaActual.tpl');
+       }
 
     }

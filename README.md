@@ -11,13 +11,34 @@ Pagina:
 
 ANOTACIONES MIAS: 
 
-VIEWS:
-
-1. tablaActualView muestra la tabla de los equipos de la temporada actual.
-2. tablaJugadores muestra los goleadores asistidores y vallas menos vencidas de la temporada actual.
-3. jugadoresView muestra la DB de todos los jugadores que jugaron alguna temporada en paolo, se va poder filtrar por temporada y por equipo de esa temporada.
-4. noticiasView simplemente muestra las noticias sobre la temporada actual. 
-5. temporadasView muestra todas las temproadas jugadas en paolo con su respectivo equipo campeon y sus tablas de goleadores asistidores y vallas.
-6. jugadoresPorTemporadaView va a ser basicamente una subseccion de jugadoresView. En la que el usuario va a poder seleccionar una temporada y va a aparecer una tabla con los goleadores asistidores y vallas de esa temporada.
+----------CONTROLLERS----------
 
 
+1. jugadoresController maneja la seccion jugadores que pasaron por paolo.
+2. tablasController maneja las tablas actuales tanto de equipos como de estadisticas de jugadores.
+3. temporadasController maneja las consultas a temporadas anteriores tanto de equipos campeones como de estadisticas de jugadores.
+
+
+----------MODELS----------
+
+
+1. jugadoresModel va a manejar las consultas sobre las estadisticas de los jugadores que pasaron por paolo y sobre las estadisticas de los jugadores en esta temporada.
+2. equiposModel va a manejar las consultas sobre los equipos.
+3. temporadasModel va a hacer consulta a todo lo que sea por temporadas pasadas. Por ejemplo el equipo campeon de la temporada 1 y la tabla con las estadisticas de los jugadores de esa temporada.
+
+
+----------VIEWS----------
+
+
+1. jugadoresView muestra las estadisticas de todos los jugadores que pasaron por paolo.
+2. noticiasView muestra las noticias actuales de la temproada actual.
+3. tablasView va a desplegar 2 opciones. Tabla de equipos actual y tabla de estadisticas de la temporada actual.
+4. temporadasView se va a encargar de mostrar las temporadas de la 1 a la 8 de paolo con el equipo campeon y sus tabla de estadisticas.
+
+
+----------REQUIRE ONCE DE CONTROLLERS----------
+
+
+1. jugadoresController requiere solamente jugadoresModel y jugadoresView.
+2. tablasController requiere equiposModel, jugadoresModel y tablasView.
+3. temporadasController requiere temporadasModel y temporadasView.

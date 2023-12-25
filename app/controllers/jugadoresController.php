@@ -1,7 +1,6 @@
 <?php 
 require_once './app/views/jugadoresView.php';
 require_once './app/models/jugadoresModel.php';
-require_once './app/models/temporadasModel.php';
 
     class JugadoresController {
 

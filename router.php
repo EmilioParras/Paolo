@@ -15,13 +15,13 @@ $params = explode('/', $action);
 switch ($params[0]) {
     case 'noticias' :
         $temporadasController = new TemporadasController();
-        $temporadasController->showNoticias();
+        $temporadasController->showHome();
         break;
-    //case 'temporada' :
-    //    $temporadasController = new TemporadasController();
-    //    $id = $paramS[1];
-    //    $temporadasController->showTemporadaById($id);
-    //    break;
+    case 'temporada' :
+        $temporadasController = new TemporadasController();
+        $id = $paramS[1];
+        $temporadasController->showTemporadaById($id);
+        break;
 
         
 }
