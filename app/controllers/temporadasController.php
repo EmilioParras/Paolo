@@ -19,4 +19,14 @@ require_once './app/views/temporadasView.php';
             $this->temporadasView->showHome($allTemporadas);
         }
 
+        public function showDatosTemporadaById($id) {
+            $equipoCampeonTemporada = $this->temporadasModel->getEquipoCampeonTemporada($id);
+            $jugadoresTemporada = $this->temporadasModel->getJugadoresTemporada($id);
+            $this->temporadasView->showDatosTemporadaById($jugadoresTemporada);  
+        }
+
+        public function show() {
+            $this->temporadasView->show(); 
+        }
+
     }

@@ -42,3 +42,29 @@ ANOTACIONES MIAS:
 1. jugadoresController requiere solamente jugadoresModel y jugadoresView.
 2. tablasController requiere equiposModel, jugadoresModel y tablasView.
 3. temporadasController requiere temporadasModel y temporadasView.
+
+
+
+----------ANOTACIONES SOBRE CONSULTAS SQL----------
+
+-----CONSULTA 1-----
+SELECT equipos.ID, equipos.nombre, equipos.ID_temporadaDeJuego from equipos JOIN temporadas ON equipos.ID_temporadaDeJuego = temporadas.ID WHERE temporadas.ID = X 
+ME DEVUELVE TODOS LOS EQUIPOS CUYO ID_temporadaDeJuego sea = a 1 OSEA TODOS LOS EQUIPOS QUE JUGARON LA TEMPORADA X
+
+
+-----CONSULTA 2-----
+SELECT * 
+FROM equipos
+JOIN temporadas ON equipos.ID_temporadaDeJuego = temporadas.ID && equipos.ID = temporadas.ID_equipoCampeon
+JOIN jugadorxtemporada ON equipos.ID = jugadorxtemporada.ID_equipoTemporada
+WHERE temporadas.ID = X 
+ME DEVUELVE EL EQUIPO Y LOS JUGADORES CAMPEONES DE LA TEMPORADA X
+
+
+-----CONSULTA 3-----
+SELECT * 
+FROM equipos
+JOIN temporadas ON equipos.ID_temporadaDeJuego = temporadas.ID && equipos.ID = temporadas.ID_equipoCampeon
+JOIN jugadorxtemporada ON temporadas.ID = jugadorxtemporada.ID_Temporada
+WHERE temporadas.ID = X
+ME DEVUELVE EL EQUIPO CAMPEON DE LA TEMPORADA X Y TODOS SUS JUGADORES

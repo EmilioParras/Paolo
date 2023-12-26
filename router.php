@@ -19,8 +19,8 @@ switch ($params[0]) {
         break;
     case 'temporada' :
         $temporadasController = new TemporadasController();
-        $id = $paramS[1];
-        $temporadasController->showTemporadaById($id);
+        $id = $params[1];
+        $temporadasController->showDatosTemporadaById($id);
         break;
 
         
