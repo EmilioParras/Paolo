@@ -20,13 +20,15 @@ require_once './app/views/temporadasView.php';
         }
 
         public function showDatosTemporadaById($id) {
+            $allTemporadas = $this->temporadasModel->getAllTemporadas();
             $equipoCampeonTemporada = $this->temporadasModel->getEquipoCampeonTemporada($id);
             $jugadoresTemporada = $this->temporadasModel->getJugadoresTemporada($id);
-            $this->temporadasView->showDatosTemporadaById($jugadoresTemporada);  
+            $this->temporadasView->showDatosTemporadaById($jugadoresTemporada, $equipoCampeonTemporada, $allTemporadas);  
         }
 
         public function show() {
-            $this->temporadasView->show(); 
+            $allTemporadas = $this->temporadasModel->getAllTemporadas();
+            $this->temporadasView->show($allTemporadas); 
         }
 
     }

@@ -68,3 +68,13 @@ JOIN temporadas ON equipos.ID_temporadaDeJuego = temporadas.ID && equipos.ID = t
 JOIN jugadorxtemporada ON temporadas.ID = jugadorxtemporada.ID_Temporada
 WHERE temporadas.ID = X
 ME DEVUELVE EL EQUIPO CAMPEON DE LA TEMPORADA X Y TODOS SUS JUGADORES
+
+
+----------ERRORES----------
+
+Warning: Undefined property: Smarty_Internal_Undefined::$objMap in C:\xampp\htdocs\PaginaPaolo\libs\smarty-4.3.4\libs\sysplugins\smarty_internal_extension_handler.php on line 132
+
+Fatal error: Uncaught --> Smarty: undefined extension class 'Smarty_Internal_Method_Assgin' <-- thrown in C:\xampp\htdocs\PaginaPaolo\libs\smarty-4.3.4\libs\sysplugins\smarty_internal_undefined.php on line 62
+
+Posibles causas:
+1- Mal uso del template para acceder a los datos - (PENDIENTE)

@@ -10,4 +10,16 @@ class TablasView {
         $this->smarty = new Smarty();
     }
 
+    public function showTabla($equiposTemporada, $allTemporadas) {
+        $this->smarty->assign('temporadas', $allTemporadas);
+        $this->smarty->assign('equipos', $equiposTemporada);
+        $this->smarty->display('templates/tablaTest.tpl');
+    }
+
+    public function showTablaPromesas($equiposTemporada, $allTemporadas) {
+        $this->smarty->assign('temporadas', $allTemporadas);
+        $this->smarty->assign('equipos', $equiposTemporada);
+        $this->smarty->display('templates/tablaPromesas.tpl');
+    }
+
 }

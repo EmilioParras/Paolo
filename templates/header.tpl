@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,8 +34,9 @@
             <div class="dropdown">
               <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tabla</a>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="tabla">Tabla actual</a></li>
-                  <li><a class="dropdown-item" href="estadisticas">Tabla Estadisticas</a></li>
+                  <li><a class="dropdown-item" href="tabla/1">Tabla primera</a></li>
+                  <li><a class="dropdown-item" href="tabla/2">Tabla segunda</a></li>
+                  <li><a class="dropdown-item" href="tabla/3">Tabla promesas</a></li>
               </ul>
             </div>
           </li>
@@ -42,16 +44,19 @@
                   <a class="btn dropdown-toggle" href="inicio" role="button" data-bs-toggle="dropdown" aria-expanded="false">Temporadas</a>
                   <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
                     {foreach from=$temporadas item=$temporada}
-                      <li class="nav-item"><a class="nav-link text-black d-flex" href="temporada/{$temporada->ID}">Temporada {$temporada->numeroTemporada}</a></li>
+                      <li><a class="dropdown-item" href="temporada/{$temporada->ID}">Temporada {$temporada->numeroTemporada}</a></li>
                     {/foreach}  
                     </ul> 
               </div>
           <li class="nav-item active">
             <a class="nav-link text-black" aria-current="page" href="jugadores">Jugadores</a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link text-black" aria-current="page" href="equipos">Equipos y planteles</a>
+          </li>
           </ul>
+          <a><img class="d-flex mx-3" width="70px" height="70px" src="./images/paolo.png" alt="icono"></a>
           
-          <a><img class="d-flex mx-3" width="70px" height="70px" src="/images/iconoPaolo.jpg" alt="iconoPaolo"></a>
       </div>
     </div>
   </nav>
@@ -63,3 +68,6 @@
   
 </header>
 
+{block name="contenido"}
+  
+{/block}
