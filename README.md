@@ -1,13 +1,5 @@
 Pagina:
-1- Header limpio, solamente con el logo.
-2- Se podra navegar entre diferentes secciones las cuales son:
-	1- Noticias sobre la temporada actual. Por ejemplo: Fichajes, dadas de baja a jugadores, declaraciones, respectivos premios al final 		de la temporada, etc.			
-	2- Tablas. En esta seccion se podra navegar entre distintas tablas. Una de ellas la de los equipos con sus partidos jugados, 			ganados, perdidos, goles a favor, goles en contra, etc. 
-		Tabla de goleadores, asistidores y valla menos vencida.
-	3- Temporadas pasadas. Seccion dedicada a justamente informacion sobre los campeones de las temporadas pasadas. Por ejemplo, en la 		temporada actual que salio campeon Velez, pondria la foto de los campeones y datos sobre su temporada, goleador, asistidor, 		partidos ganados,etc.
-	4- Jugadores. Informacion sobre los jugadores de la temporada actual (Goleadores, asistidores, vallas).
-	5- Historia. Seccion sobre la historia de FCPG.
-3- Footer (Pie de pagina). Informacion con las redes de FCPG.
+
 
 ANOTACIONES MIAS: 
 
@@ -41,7 +33,7 @@ ANOTACIONES MIAS:
 
 1. jugadoresController requiere solamente jugadoresModel y jugadoresView.
 2. tablasController requiere equiposModel, jugadoresModel y tablasView.
-3. temporadasController requiere temporadasModel y temporadasView.
+3. temporadasController requiere temporadasModel, temporadasView y jugadoresModel.
 
 
 
@@ -69,12 +61,32 @@ JOIN jugadorxtemporada ON temporadas.ID = jugadorxtemporada.ID_Temporada
 WHERE temporadas.ID = X
 ME DEVUELVE EL EQUIPO CAMPEON DE LA TEMPORADA X Y TODOS SUS JUGADORES
 
+-----CONSULTA 4-----
+SELECT * 
+FROM jugadorxtemporada
+JOIN temporadas 
+ON jugadorxtemporada.ID_Temporada = temporadas.ID
+JOIN equipos 
+ON jugadorxtemporada.ID_equipoTemporada = equipos.ID
+JOIN divisiones 
+ON equipos.division = divisiones.ID
+WHERE temporadas.ID = 8 AND divisiones.ID = X
+JUGADORES DE LA TEMPORADA ACTUAL QUE JUEGUE EN X DIVISION
 
-----------ERRORES----------
+----------ANOTACIONES TEMPORADAS---------
 
-Warning: Undefined property: Smarty_Internal_Undefined::$objMap in C:\xampp\htdocs\PaginaPaolo\libs\smarty-4.3.4\libs\sysplugins\smarty_internal_extension_handler.php on line 132
+Temporada 1: Completa.
 
-Fatal error: Uncaught --> Smarty: undefined extension class 'Smarty_Internal_Method_Assgin' <-- thrown in C:\xampp\htdocs\PaginaPaolo\libs\smarty-4.3.4\libs\sysplugins\smarty_internal_undefined.php on line 62
+Temporada 2:
 
-Posibles causas:
-1- Mal uso del template para acceder a los datos - (PENDIENTE)
+Temporada 3:
+
+Temporada 4:
+
+Temporada 5:
+
+Temporada 6:
+
+Temporada 7:
+
+Temporada 8:

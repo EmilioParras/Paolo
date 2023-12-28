@@ -1,16 +1,19 @@
 <?php
 
 require_once './app/models/temporadasModel.php';
+require_once './app/models/jugadoresModel.php';
 require_once './app/views/temporadasView.php';   
 
 
     class TemporadasController {
 
         private $temporadasModel;
+        private $jugadoresModel;        
         private $temporadasView;
 
         public function __construct() {
             $this->temporadasModel = new TemporadasModel();
+            $this->jugadoresModel = new JugadoresModel();
             $this->temporadasView = new TemporadasView();
         }
 
@@ -21,9 +24,11 @@ require_once './app/views/temporadasView.php';
 
         public function showDatosTemporadaById($id) {
             $allTemporadas = $this->temporadasModel->getAllTemporadas();
-            $equipoCampeonTemporada = $this->temporadasModel->getEquipoCampeonTemporada($id);
-            $jugadoresTemporada = $this->temporadasModel->getJugadoresTemporada($id);
-            $this->temporadasView->showDatosTemporadaById($jugadoresTemporada, $equipoCampeonTemporada, $allTemporadas);  
+            $jugadoresCampeonesTemporada = $this->temporadasModel->getJugadoresCampeonesTemporada($id);
+            $jugadoresTemporadaGoles = $this->jugadoresModel->getJugadoresTemporadaGoles($id);
+            $jugadoresTemporadaAsist = $this->jugadoresModel->getJugadoresTemporadaAsistencias($id);
+            $jugadoresTemporadaVallas = $this->jugadoresModel->getJugadoresTemporadaVallas($id);
+            $this->temporadasView->showDatosTemporadaById($jugadoresTemporadaGoles, $jugadoresTemporadaAsist, $jugadoresTemporadaVallas, $jugadoresCampeonesTemporada, $allTemporadas);  
         }
 
         public function show() {

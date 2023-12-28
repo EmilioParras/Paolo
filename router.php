@@ -8,8 +8,6 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
 $action = 'noticias';
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
-} else {
-    $action = 'noticias';
 }
 
 $params = explode('/', $action);
@@ -27,11 +25,11 @@ switch ($params[0]) {
     case 'temporada' :
         $temporadasController = new TemporadasController();
         $id = $params[1];
-        $temporadasController->show();
+        $temporadasController->showDatosTemporadaById($id);
         break;
     default:
-    echo('error 404 not found');
-    break;
+        echo('error 404 not found');
+        break;
 
         
 }

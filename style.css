@@ -1,0 +1,32 @@
+
+.custom-nav-link,
+.custom-dropdown-toggle {
+    color: black !important;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.my-header .navbar{
+    border-bottom: none !important; 
+    border: none !important;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+/* Estilo para las celdas de la tabla */
+table, th, td {
+    background-color: #f2f2f2;
+    border: 11px solid black;
+}
+
+/* Estilo para el color de fondo de las celdas del encabezado */
+th {
+    background-color: #f2f2f2; /* Puedes ajustar este color según tus preferencias */
+}
