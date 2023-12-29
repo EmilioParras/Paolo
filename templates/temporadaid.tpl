@@ -21,7 +21,7 @@
 
             <!-- Tabla 1 -->
             <div class="col-md-4">
-                <table class="table table-bordered" style="text-align: center;">
+                <table class="table table-bordered table-responsive" style="text-align: center;">
                     <thead>
                     <h4 style="text-align: center;">Goleadores</h4>
                     <tr>

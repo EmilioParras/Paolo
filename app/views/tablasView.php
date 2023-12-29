@@ -13,7 +13,7 @@ class TablasView {
     public function showTabla($equiposTemporada, $allTemporadas) {
         $this->smarty->assign('temporadas', $allTemporadas);
         $this->smarty->assign('equipos', $equiposTemporada);
-        $this->smarty->display('templates/tablaTest.tpl');
+        $this->smarty->display('templates/tablaActual.tpl');
     }
 
     public function showTablaPromesas($equiposTemporada, $allTemporadas) {
