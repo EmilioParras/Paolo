@@ -17,9 +17,9 @@ require_once './app/views/temporadasView.php';
             $this->temporadasView = new TemporadasView();
         }
 
-        public function showHome () {
+        public function showInicio () {
             $allTemporadas = $this->temporadasModel->getAllTemporadas();
-            $this->temporadasView->showHome($allTemporadas);
+            $this->temporadasView->showInicio($allTemporadas);
         }
 
         public function showDatosTemporadaById($id) {

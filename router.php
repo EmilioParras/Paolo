@@ -13,9 +13,9 @@ if (!empty($_GET['action'])) {
 $params = explode('/', $action);
 
 switch ($params[0]) {
-    case 'noticias' :
+    case 'inicio' :
         $temporadasController = new TemporadasController();
-        $temporadasController->showHome();
+        $temporadasController->showInicio();
         break;
     case 'tabla' :
         $tablasController = new TablasController();

@@ -1,15 +1,138 @@
 * {
+    margin: 0;
+    padding: 0;
     font-family: 'Noto Sans Math', sans-serif;
+    box-sizing: border-box;
 }
-.nav-link {
-    --bs-nav-link-padding-y: 0; /* Establece el padding-y a 0 para quitar el espacio vertical */
+
+
+
+/*----------CSS DEL HEADER----------*/
+
+.containerHeader {
+    width: 100%;
 }
-.seccionNoticia {
-    height:auto;
-    width: auto;
-    background: #e2dcdc;
-  }
-.noticiaPrincipal {
+
+.divHeader {
+    padding: 50px;
+    text-align: center;
+    background-color: black;/* Añadir este estilo para que el texto sea blanco */
+}
+
+.navMain {
+    background-color: #c7b255;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+ul.itemsBarraNavegacion {
+    display: flex;
+    list-style: none; /* Quitar las viñetas de la lista */
+    margin-top: 15px;
+}
+
+ul.itemsBarraNavegacion li {
+    margin: 0 15px; /* Añadir espacio entre los elementos de la lista */
+}
+
+ul.itemsBarraNavegacion li a, a.dropdown-toggle {
+    text-decoration: none; /* Quitar la decoración de enlace */
+    font-size: 25px; /* Tamaño de fuente de 20px */
+    color: black; /* Cambiar el color del texto (puedes ajustarlo según tu diseño) */
+}
+
+/*----------CSS CONTAINER---------*/
+
+.containerMain {
+    background-color: rgb(rgb(204, 152, 30), rgb(0, 0, 0));
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.container {
+    display: grid;  
+    grid-template-columns: 25% auto 275px;
+    justify-content: center;
+
+}
+
+/*----------SECCION DEL PERIODISMO----------*/
     
-    background: #ffffff;
+.seccionPeriodismo {
+    margin: 5px 0px;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: grid;
+}
+
+.elementoPeriodismo{
+    border: 2px solid black;
+    margin: 5px;
+    padding: 10px;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: red;
+}
+
+/*----------SECCION DE LAS NOTICIAS IMPORTANTES----------*/
+
+.seccionNoticias {
+    margin: 5px 5px;
+    border-radius: 10px;
+    border: 5px solid black;
+    display: grid;
+}
+
+.elementoNoticia {
+    background-color: rgb(96, 96, 96);
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.imgNoticia{
+    height: auto;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+p.elementoNoticia {
+justify-content: center;
+}
+
+.boton{
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.titulo {
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    display: block; 
+    margin: 10px auto;
+}
+
+/*----------SECCION RESULTADOS----------*/
+
+.seccionResultados {
+    display: grid;
+    text-align: center;
+    margin: 5px 0px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.elementoResultado {
+    border: 2px solid black;
+    margin: 5px;
+    padding: 10px;
+    color: black;
 }

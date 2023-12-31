@@ -10,9 +10,10 @@ require_once './libs/smarty-4.3.4/libs/Smarty.class.php';
             $this->smarty = new Smarty();
         }
 
-       public function showHome($allTemporadas) {
+       public function showInicio($allTemporadas) {
         $this->smarty->assign('temporadas', $allTemporadas);
-        $this->smarty->display('templates/noticia.tpl');
+        $this->smarty->display('templates/header.tpl');
+        $this->smarty->display('templates/inicio.tpl');
        }
 
        public function showDatosTemporadaById($jugadoresTemporadaGoles, $jugadoresTemporadaAsist, $jugadoresTemporadaVallas, $jugadoresCampeonesTemporada, $allTemporadas) {
