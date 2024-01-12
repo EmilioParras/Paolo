@@ -22,17 +22,23 @@ require_once './app/models/temporadasModel.php';
         public function showTabla($id) {
             $allTemporadas = $this->temporadasModel->getAllTemporadas();
             if($id == 1) {
-                $equiposTemporada = $this->equiposModel->getEquiposTemporada(1);
-                $jugadoresTemporada = $this->jugadoresModel->getJugadoresTemporadaActual(1);
-                $this->tablasView->showTabla($equiposTemporada, $allTemporadas);
+                $equiposTemporada = $this->equiposModel->getEquiposTemporadaTabla(1);
+                $golesTemporada = $this->jugadoresModel->getJugadoresTemporadaGolesConDivision(1);
+                $asistenciasTemporada = $this->jugadoresModel->getJugadoresTemporadaAsistenciasConDivision(1);
+                $vallasTemporada = $this->jugadoresModel->getJugadoresTemporadaVallasConDivision(2);
+                $this->tablasView->showTabla($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada);
             } else if($id == 2) {
-                $equiposTemporada = $this->equiposModel->getEquiposTemporada(2);
-                $jugadoresTemporada = $this->jugadoresModel->getJugadoresTemporadaActual(2);
-                $this->tablasView->showTabla($equiposTemporada, $allTemporadas);
+                $equiposTemporada = $this->equiposModel->getEquiposTemporadaTabla(2);
+                $golesTemporada = $this->jugadoresModel->getJugadoresTemporadaGolesConDivision(2);
+                $asistenciasTemporada = $this->jugadoresModel->getJugadoresTemporadaAsistenciasConDivision(2);
+                $vallasTemporada = $this->jugadoresModel->getJugadoresTemporadaVallasConDivision(2);
+                $this->tablasView->showTabla($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada);
             } else if ($id == 3){
-                $equiposTemporada = $this->equiposModel->getEquiposTemporada(3);
-                $jugadoresTemporada = $this->jugadoresModel->getJugadoresTemporadaActual(3);
-                $this->tablasView->showTablaPromesas($equiposTemporada, $allTemporadas);
+                $equiposTemporada = $this->equiposModel->getEquiposTemporadaTabla(3);
+                $golesTemporada = $this->jugadoresModel->getJugadoresTemporadaGolesConDivision(3);
+                $asistenciasTemporada = $this->jugadoresModel->getJugadoresTemporadaAsistenciasConDivision(3);
+                $vallasTemporada = $this->jugadoresModel->getJugadoresTemporadaVallasConDivision(3);
+                $this->tablasView->showTablaPromesas($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada);
             }
         }
 

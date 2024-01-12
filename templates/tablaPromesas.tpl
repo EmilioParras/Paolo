@@ -1,110 +1,89 @@
-{include file="templates/header.tpl"}
+{include file="header.tpl"}
 
-<div class="container">
-  <div class="row text-center">
-    <div class="col text-center bg-dark m-1">
-            <div class="text-white display-5">Tabla Temporada</div>
-            <table class="table table-striped table-bordered table-responsive ">
-            <thead>
-                <tr class="text-center">
-                    <th scope="col">#</th>
-                    <th scope="col">Equipo</th>
-                    <th scope="col">Pts</th>
-                    <th scope="col">PJ</th>
-                    <th scope="col">PG</th>
-                    <th scope="col">PE</th>
-                    <th scope="col">PP</th>
-                    <th scope="col">DIF</th>
+<div class="contenedorTablas">
+    <table class="tablaPrincipal">
+        <tr>
+            <th colspan="10"  class="tituloTabla">Tabla puntos</th>
+        </tr>
+        <tr>
+            <th>#</th>
+            <th>Equipo</th>
+            <th>Pts</th>
+            <th>PJ</th>
+            <th>PG</th>
+            <th>PE</th>
+            <th>PP</th>
+            <th>DIF</th>
+        </tr>
+        {assign var=counter value=1}
+
+        {foreach from=$equipos item=$equipo}
+        <tr>
+            <td>{counter}</td>
+            <td>{$equipo->nombre}</td>
+            <td>{$equipo->puntos}</td>
+            <td>{$equipo->partidosJugados}</td>
+            <td>{$equipo->partidosGanados}</td>
+            <td>{$equipo->partidosEmpatados}</td>
+            <td>{$equipo->partidosPerdidos}</td>
+            <td>{$equipo->diferencia}</td>
+        </tr>
+    {/foreach}
+
+    </table>
+
+    <table class="tablaEstadisticas">
+        <tr>
+            <th colspan="2" class="tituloTabla">Goleadores</th>
+        </tr>
+        
+        <tr>
+            <th>Jugador</th>
+            <th>Goles</th>
+        </tr>
+        {foreach from=$jugadores item=$jugador}
+            {if $jugador->golesTemporada>0}
+                <tr>    
+                    <th>{$jugador->tag}</th>
+                    <th>{$jugador->golesTemporada}</th>
                 </tr>
-            </thead>
-            <tbody>
-                {foreach from=$equipos item=$infoEquipo}
-                    <tr>
-                    <th scope="row">{$infoEquipo@iteration}</th>
-                        <td>{$infoEquipo->nombre}</td>
-                        <td>{$infoEquipo->puntos}</td>
-                        <td>{$infoEquipo->partidosJugados}</td>
-                        <td>{$infoEquipo->partidosGanados}</td>
-                        <td>{$infoEquipo->partidosEmpatados}</td>
-                        <td>{$infoEquipo->partidosPerdidos}</td>
-                        <td>{$infoEquipo->diferencia}</td>
-                    </tr>
-                {/foreach}
-            </tbody>
-        </table>
+            {/if}
+        {/foreach}
+    </table>
 
-    </div>
-  </div>
-</div>
+    <table class="tablaEstadisticas">
+        <tr>
+            <th colspan="2" class="tituloTabla">Asistidores</th>
+        </tr>
+        <tr>
+            <th>Jugador</th>
+            <th>Asistencias</th>
+        </tr>
+        {foreach from=$jugadores item=$jugador}
+            {if $jugador->asistenciasTemporada>0}
+                <tr>    
+                    <th>{$jugador->tag}</th>
+                    <th>{$jugador->asistenciasTemporada}</th>
+                </tr>
+            {/if}
+        {/foreach}
+    </table>
 
-<div class="container">
-    <div class="row">
-
-        <div class="col-md-4">
-            <div class="col text-center bg-dark m-1">
-                <div class="text-white display-5">Goleadores</div>
-                <table class="table table-striped table-bordered table-responsive ">
-                    <thead>
-                        <tr class="text-center">
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Goles</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {foreach from=$equipos item=$infoEquipo}
-                        <tr>
-                            <td>{$infoEquipo->nombre}</td>
-                            <td>{$infoEquipo->puntos}</td>
-                        </tr>
-                        {/foreach}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="col text-center bg-dark m-1">
-                <div class="text-white display-5">Asistidores</div>
-                <table class="table table-striped table-bordered table-responsive ">
-                    <thead>
-                        <tr class="text-center">
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Asistencias</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {foreach from=$equipos item=$infoEquipo}
-                        <tr>
-                            <td>{$infoEquipo->nombre}</td>
-                            <td>{$infoEquipo->puntos}</td>
-                        </tr>
-                        {/foreach}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="col text-center bg-dark m-1">
-                <div class="text-white display-5">Vallas</div>
-                <table class="table table-striped table-bordered table-responsive ">
-                    <thead>
-                        <tr class="text-center">
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Vallas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {foreach from=$equipos item=$infoEquipo}
-                        <tr>
-                            <td>{$infoEquipo->nombre}</td>
-                            <td>{$infoEquipo->puntos}</td>
-                        </tr>
-                        {/foreach}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-    </div>
+    <table class="tablaEstadisticas">
+        <tr>
+            <th colspan="2" class="tituloTabla">Vallas</th>
+        </tr>
+        <tr>
+            <th>Jugador</th>
+            <th>Vallas</th>
+        </tr>
+        {foreach from=$jugadores item=$jugador}
+            {if $jugador->vallasTemporada>0}
+                <tr>    
+                    <th>{$jugador->tag}</th>
+                    <th>{$jugador->vallasTemporada}</th>
+                </tr>
+            {/if}
+        {/foreach}
+    </table>
 </div>

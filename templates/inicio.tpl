@@ -1,86 +1,61 @@
+{include file="header.tpl"}
+
 <main>
   <div class="containerMain">
       <div class="container">
 
           <div class="seccionPeriodismo">
-                <div class="elementoPeriodismo">
-                    <h4>Entrevista a Mendy. Capitan de All Boys.</h4>
-                    <a href="/templates/periodismo/entrevistaMendy.html"><button class="boton">Ver.</button></a>
-                </div>
 
                 <div class="elementoPeriodismo">
-                    <h4>Se define el puesto promocion con estos 2 finalistas.</h4>
-                    <a href="/templates/periodismo/entrevistaMendy.html"><button class="boton">Ver.</button></a>
-                </div>
+                    <h4>Equipos confirmados para la temporada 9.</h4>
+                    <h3>Primera:</h3>
+                    <img style="width: 25px; height:25px;" src="./images/equipos1era/manchesterCity1era.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos1era/bayerMunich1era.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos1era/barcelona1era.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos1era/realMadrid1era.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos1era/liverpool1era.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos1era/borussiaDortmund1era.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos1era/manchesterUnited1era.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos1era/psg1era.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos1era/milan1era.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos1era/inter1era.png"></img>
 
-                <div class="elementoPeriodismo">
-                    <h4>Entrevista picante a Nezyo. Jugador de Quilmes</h4>
-                    <a href="/templates/periodismo/entrevistaMendy.html"><button class="boton">Ver.</button></a>
+                    <h3>Segunda:</h3>
+                    <img style="width: 25px; height:25px;" src="./images/equipos2da/ajax2da.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos2da/sevilla2da.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos2da/arsenal2da.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos2da/atletico2da.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos2da/benfica2da.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos2da/chelsea2da.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos2da/juventus2da.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos2da/tottenham2da.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos2da/porto2da.png"></img>
+                    <img style="width: 25px; height:25px;" src="./images/equipos2da/napoli2da.png"></img>
+                    
+                    <h3>Tercera:</h3>
+                    <img style="width: 20px; height:20px;" src="./images/equipos1era/barcelona1era.png"></img>
+                    <img style="width: 20px; height:20px;" src="./images/equipos1era/barcelona1era.png"></img>
+                    <img style="width: 20px; height:20px;" src="./images/equipos1era/barcelona1era.png"></img>
+                    <img style="width: 20px; height:20px;" src="./images/equipos1era/barcelona1era.png"></img>
+                    <img style="width: 20px; height:20px;" src="./images/equipos1era/barcelona1era.png"></img>
+                    <img style="width: 20px; height:20px;" src="./images/equipos1era/barcelona1era.png"></img>
+                    <img style="width: 20px; height:20px;" src="./images/equipos1era/barcelona1era.png"></img>
+                    <img style="width: 20px; height:20px;" src="./images/equipos1era/barcelona1era.png"></img>
+                    <img style="width: 20px; height:20px;" src="./images/equipos1era/barcelona1era.png"></img>
+                    
                 </div>
-                <div class="elementoPeriodismo">
-                    <h4>Entrevista a Mendy. Capitan de All Boys.</h4>
-                    <a href="/templates/periodismo/entrevistaMendy.html"><button class="boton">Ver.</button></a>
-                </div>
-
-                <div class="elementoPeriodismo">
-                    <h4>Se define el puesto promocion con estos 2 finalistas.</h4>
-                    <a href="/templates/periodismo/entrevistaMendy.html"><button class="boton">Ver.</button></a>
-                </div>
-
-                <div class="elementoPeriodismo">
-                    <h4>Entrevista picante a Nezyo. Jugador de Quilmes</h4>
-                    <a href="/templates/periodismo/entrevistaMendy.html"><button class="boton">Ver.</button></a>
-                </div>
-
-                
 
           </div>
 
           <div class="seccionNoticias">
-                <div class="elementoNoticia">
-                    <h3 class="titulo">Último momento</h3>
-                    <img class="imgNoticia" src="./images/imagenesNoticias/ultimaNoticia.jpg" alt="">
-                    <p class="parrafoNoticia">Enterate sobre la nueva temática de la próxima temporada. </p>
-                    <a href=""><button class="boton" > Ver noticia.</button></a>
-                </div>
-
-                <div class="elementoNoticia">
-                    <h3 class="titulo">Se buscan DTs para 3era división.</h3>
-                    <img class="imgNoticia" src="./images/imagenesNoticias/seBuscanDt.png" alt="">
-                    <p class="parrafoNoticia">Enterate sobre la nueva temática de la próxima temporada.</p>
-                    <a href=""><button class="boton" > Ver noticia.</button></a>
-                </div>
-
-                <div class="elementoNoticia">
-                    <h3 class="titulo">Último momento</h3>
-                    <img class="imgNoticia" src="./images/imagenesNoticias/ultimaNoticia.jpg" alt="">
-                    <p class="parrafoNoticia">Enterate sobre la nueva temática de la próxima temporada. </p>
-                    <a href=""><button class="boton" > Ver noticia.</button></a>
-                </div>
+                
+            <div class="elementoNoticia">
+                <h3 class="titulo">TierList Segunda División.</h3>
+                <img class="imgNoticia" src="./images/tier2da.png" alt="">
+            </div>
 
           </div>
-
-          <div class="seccionResultados">
-
-            <div class="elementoResultado">
-                <h3>Resultados Primera</h3>
-                <p class="parrafoNoticia">Enterate ya de los resultados de primera división.</p>
-                <a class="boton" href="/templates/resultados/resultadosPrimera.html"><button class="boton">Ver resultados.</button></a>
-            </div>
-
-            <div class="elementoResultado">
-                <h3>Resultados Segunda</h3>
-                <p class="parrbotonafoNoticia">Enterate ya de los resultados de segunda división.</p>
-                <a class="boton" href="/templates/resultados/resultadosSegunda.html"><button class="boton">Ver resultados.</button></a>            
-            </div>
-
-            <div class="elementoResultado">
-                <h3>Resultados Tercera</h3>
-                <p class="parrafoNoticia">Enterate ya de los resultados de tercera división.</p>
-                <a class="boton" href="/templates/resultados/resultadosTercera.html"><button class="boton">Ver resultados.</button></a>            
-            </div>
-
-        </div>
+      </div>
       </div>
   </div>
 

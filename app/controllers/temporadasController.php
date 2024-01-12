@@ -22,6 +22,23 @@ require_once './app/views/temporadasView.php';
             $this->temporadasView->showInicio($allTemporadas);
         }
 
+        public function showTemporadas() {
+            $allTemporadas = $this->temporadasModel->getAllTemporadas();
+            $this->temporadasView->showTemporadas($allTemporadas);
+        }
+
+        public function showFechas() {
+            $this->temporadasView->showFechas();
+        }
+
+        public function showEquipos() {
+            $equiposTemporada = $this->equiposModel->getEquiposTemporada();
+        }
+
+        public function showEquipo($id) {
+            
+        }
+
         public function showDatosTemporadaById($id) {
             $allTemporadas = $this->temporadasModel->getAllTemporadas();
             $jugadoresCampeonesTemporada = $this->temporadasModel->getJugadoresCampeonesTemporada($id);
@@ -31,9 +48,5 @@ require_once './app/views/temporadasView.php';
             $this->temporadasView->showDatosTemporadaById($jugadoresTemporadaGoles, $jugadoresTemporadaAsist, $jugadoresTemporadaVallas, $jugadoresCampeonesTemporada, $allTemporadas);  
         }
 
-        public function show() {
-            $allTemporadas = $this->temporadasModel->getAllTemporadas();
-            $this->temporadasView->show($allTemporadas); 
-        }
 
     }

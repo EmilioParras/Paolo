@@ -5,8 +5,6 @@
     box-sizing: border-box;
 }
 
-
-
 /*----------CSS DEL HEADER----------*/
 
 .containerHeader {
@@ -46,7 +44,6 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 /*----------CSS CONTAINER---------*/
 
 .containerMain {
-    background-color: rgb(rgb(204, 152, 30), rgb(0, 0, 0));
     margin-top: 10px;
     padding: 10px;
     background-color: #ffffff;
@@ -54,18 +51,16 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 
 .container {
     display: grid;  
-    grid-template-columns: 25% auto 275px;
+    grid-template-columns: 25% auto;
     justify-content: center;
-
 }
 
 /*----------SECCION DEL PERIODISMO----------*/
     
 .seccionPeriodismo {
     margin: 5px 0px;
-    border: 5px solid black;
-    border-radius: 10px;
     display: grid;
+    text-align: center;
 }
 
 .elementoPeriodismo{
@@ -75,35 +70,36 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     color: black;
     border-radius: 10px;
     text-align: center;
-    background-color: red;
 }
 
 /*----------SECCION DE LAS NOTICIAS IMPORTANTES----------*/
 
 .seccionNoticias {
     margin: 5px 5px;
-    border-radius: 10px;
-    border: 5px solid black;
     display: grid;
 }
 
 .elementoNoticia {
-    background-color: rgb(96, 96, 96);
+    background-color: rgb(255, 255, 255);
     border: 2px solid black;
     margin: 10px;
     padding: 10px;
     text-align: center;
+    border-radius: 10px;
 }
 
 .imgNoticia{
     height: auto;
-    width: 50%;
+    width: 75%;
     display: block;
     margin: 0 auto;
 }
 
-p.elementoNoticia {
-justify-content: center;
+.parrafoNoticia {
+    font-size: 20px;
+    color: black;
+    max-width: 50%; 
+    margin: 10px auto; 
 }
 
 .boton{
@@ -120,19 +116,154 @@ justify-content: center;
     margin: 10px auto;
 }
 
-/*----------SECCION RESULTADOS----------*/
+/*---------SECCION TABLAS----------*/
 
-.seccionResultados {
-    display: grid;
-    text-align: center;
-    margin: 5px 0px;
-    border: 5px solid black;
-    border-radius: 10px;
+.tituloTabla {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
 }
 
-.elementoResultado {
-    border: 2px solid black;
-    margin: 5px;
+.tablaPrincipal {
     padding: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px;
+    margin-top: 25px;
+}
+
+.tablaPrincipal th, .tablaPrincipal td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.tablaEstadisticas {
+    width: 30%;
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+.tablaEstadisticas th, .tablaEstadisticas td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.contenedorTablas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .contenedorTablas {
+        flex-direction: column;
+    }
+
+    .tablaEstadisticas {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/*---------SECCION TEMPORADAS----------*/
+
+.containerTemporadas {
+    margin: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; /* Ajusta el espacio entre botones según sea necesario */
+}
+
+.btnTemporada{
+    text-decoration: none;
+    padding: 15px;
+    font-size: 36px;
+    background-color: #c7b255;
     color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.btnTemporada a {
+    color: inherit; /* Heredar el color del texto del botón */
+    text-decoration: none; /* Quitar el subrayado del enlace */
+}
+
+
+/*----------SECCION TEMPORADA INDIVIDUAL----------*/
+
+.divTemporadaPrincipal {
+    padding: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.divEquipoCampeon {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.divEquipoCampeon img {
+    max-width: 100%; 
+}
+
+/*--------SECCION FECHAS---------*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tablaFecha {
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tablaFecha h2 {
+    width: 100%;
+    color: white;
+    margin: 0px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.diaHoraPartido {
+    background-color: #c7b255;
+    font-size: 18px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tablaFecha td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.imgEquipo {
+    height: 18px;
+    width: 18px;
+}
+
+.tablaFecha td {
+    width: 50px;
+    height: 30px;
+}
+
+.tablaFecha .resultado {
+    width: 20px;
 }
