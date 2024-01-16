@@ -32,17 +32,16 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
-                        <a href="fechas">Fechas</a>
-                    </li>
+                    <div class="dropDown"> 
+                            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fechas</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="fechas/1">Fechas primera</a></li>
+                                <li><a href="fechas/2">Fechas segunda</a></li>
+                                <li><a href="fechas/3">Fechas tercera</a></li>
+                            </ul>
+                        </div>
                     <li>
                         <a href="temporadas">Temporadas</a>
-                    </li>
-                    <li>
-                        <a aria-current="page" href="faq">FAQ</a>
-                    </li>
-                    <li>
-                        <a href="equipos">Equipos</a>
                     </li>
                 </ul>
             </nav>

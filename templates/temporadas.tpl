@@ -11,8 +11,6 @@
         <button class="btnTemporada"><a href="temporada/6">Temporada 6</a></button>
         <button class="btnTemporada"><a href="temporada/7">Temporada 7</a></button>
         <button class="btnTemporada"><a href="temporada/8">Temporada 8</a></button>
-        <button class="btnTemporada"><a href="temporada/9">Temporada 9</a></button>
-
     </div>
     
 </main> 

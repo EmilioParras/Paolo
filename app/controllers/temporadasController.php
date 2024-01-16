@@ -2,16 +2,19 @@
 
 require_once './app/models/temporadasModel.php';
 require_once './app/models/jugadoresModel.php';
+require_once './app/models/equiposModel.php';
 require_once './app/views/temporadasView.php';   
 
 
     class TemporadasController {
 
+        private $equiposModel;
         private $temporadasModel;
         private $jugadoresModel;        
         private $temporadasView;
 
         public function __construct() {
+            $this->equiposModel = new EquiposModel();
             $this->temporadasModel = new TemporadasModel();
             $this->jugadoresModel = new JugadoresModel();
             $this->temporadasView = new TemporadasView();
@@ -27,15 +30,20 @@ require_once './app/views/temporadasView.php';
             $this->temporadasView->showTemporadas($allTemporadas);
         }
 
-        public function showFechas() {
-            $this->temporadasView->showFechas();
-        }
-
-        public function showEquipos() {
-            $equiposTemporada = $this->equiposModel->getEquiposTemporada();
+        public function showFechas($id) {
+            if($id == 1) {
+                $this->temporadasView->showFechasPrimera();
+            } else if($id == 2) {
+                $this->temporadasView->showFechasSegunda();
+            } else if ($id == 3){
+                $this->temporadasView->showFechasTercera();
+            }
         }
 
         public function showEquipo($id) {
+            $equipo = $this->equiposModel->getEquipoId($id);
+            $jugadoresEquipo = $this->jugadoresModel->getJugadoresPorEquipo($id);
+            $this->temporadasView->showEquipo($jugadoresEquipo, $equipo);
             
         }
 

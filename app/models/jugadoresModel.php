@@ -16,11 +16,12 @@
                                         JOIN temporadas
                                         ON jugadorxtemporada.ID_Temporada = temporadas.ID
                                         JOIN equipos
-                                        ON jugadorxtemporada.ID_equipoTemporada = equipos.ID
+                                        ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo
                                         JOIN divisiones
                                         ON equipos.division = divisiones.numDivision
                                         WHERE temporadas.ID = 9 && divisiones.numDivision = ?
-                                        ORDER BY jugadorxtemporada.vallasTemporada DESC, jugadores.tag");
+                                        ORDER BY jugadorxtemporada.vallasTemporada DESC, jugadores.tag
+                                        LIMIT 0,5");
             $query->execute([$id]);
 
             $jugadoresTemporada = $query->fetchAll(PDO::FETCH_OBJ);
@@ -35,11 +36,12 @@
                                         JOIN temporadas
                                         ON jugadorxtemporada.ID_Temporada = temporadas.ID
                                         JOIN equipos
-                                        ON jugadorxtemporada.ID_equipoTemporada = equipos.ID
+                                        ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo
                                         JOIN divisiones
                                         ON equipos.division = divisiones.numDivision
                                         WHERE temporadas.ID = 9 && divisiones.numDivision = ?
-                                        ORDER BY jugadorxtemporada.asistenciasTemporada DESC, jugadores.tag");
+                                        ORDER BY jugadorxtemporada.asistenciasTemporada DESC, jugadores.tag
+                                        LIMIT 0,5");
             $query->execute([$id]);
 
             $jugadoresTemporada = $query->fetchAll(PDO::FETCH_OBJ);
@@ -54,11 +56,12 @@
                                         JOIN temporadas
                                         ON jugadorxtemporada.ID_Temporada = temporadas.ID
                                         JOIN equipos
-                                        ON jugadorxtemporada.ID_equipoTemporada = equipos.ID
+                                        ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo
                                         JOIN divisiones
                                         ON equipos.division = divisiones.numDivision
                                         WHERE temporadas.ID = 9 && divisiones.numDivision = ?
-                                        ORDER BY jugadorxtemporada.vallasTemporada DESC, jugadores.tag");
+                                        ORDER BY jugadorxtemporada.vallasTemporada DESC, jugadores.tag
+                                        LIMIT 0,5");
             $query->execute([$id]);
 
             $jugadoresTemporada = $query->fetchAll(PDO::FETCH_OBJ);
@@ -75,7 +78,8 @@
                                         JOIN temporadas 
                                         ON temporadas.ID = jugadorxtemporada.ID_Temporada
                                         WHERE temporadas.ID = ?
-                                        ORDER BY jugadorxtemporada.golesTemporada DESC");
+                                        ORDER BY jugadorxtemporada.golesTemporada DESC
+                                        LIMIT 0,5");
             $query->execute([$id]);
 
             $jugadoresTemporada = $query->fetchAll(PDO::FETCH_OBJ);
@@ -90,7 +94,8 @@
                                         JOIN temporadas     
                                         ON temporadas.ID = jugadorxtemporada.ID_Temporada
                                         WHERE temporadas.ID = ?
-                                        ORDER BY jugadorxtemporada.asistenciasTemporada DESC");
+                                        ORDER BY jugadorxtemporada.asistenciasTemporada DESC
+                                        LIMIT 0,5");
             $query->execute([$id]);
 
             $jugadoresTemporada = $query->fetchAll(PDO::FETCH_OBJ);
@@ -105,12 +110,25 @@
                                         JOIN temporadas 
                                         ON temporadas.ID = jugadorxtemporada.ID_Temporada
                                         WHERE temporadas.ID = ?
-                                        ORDER BY jugadorxtemporada.vallasTemporada DESC, jugadores.tag");
+                                        ORDER BY jugadorxtemporada.vallasTemporada DESC, jugadores.tag
+                                        LIMIT 0,5");
             $query->execute([$id]);
 
             $jugadoresTemporada = $query->fetchAll(PDO::FETCH_OBJ);
             return $jugadoresTemporada;
         }
 
+        public function getJugadoresPorEquipo($id) {
+            $query = $this->db->prepare("SELECT * 
+                                        FROM jugadores 
+                                        JOIN equipos
+                                        ON jugadores.ID_EquipoActual = equipos.ID_equipo
+                                        WHERE jugadores.ID_EquipoActual = ?");
+
+            $query->execute([$id]);
+
+            $jugadoresEquipo = $query->fetchAll(PDO::FETCH_OBJ);
+            return $jugadoresEquipo;
+        }
 
     }

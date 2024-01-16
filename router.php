@@ -1,5 +1,4 @@
 <?php
-require_once './app/controllers/jugadoresController.php';
 require_once './app/controllers/tablasController.php';
 require_once './app/controllers/temporadasController.php';
 
@@ -27,10 +26,6 @@ switch ($params[0]) {
         $id = $params[1];
         $temporadasController->showDatosTemporadaById($id);
         break;
-    case 'equipos' :
-        $temporadasController = new TemporadasController();
-        $temporadasController->showEquipos();
-        break;    
     case 'equipo' :
         $temporadasController = new TemporadasController();
         $id = $params[1];
@@ -38,7 +33,8 @@ switch ($params[0]) {
         break;
     case 'fechas' :
         $temporadasController = new TemporadasController();
-        $temporadasController->showFechas();
+        $id = $params[1];
+        $temporadasController->showFechas($id);
         break;
     default:
         echo('error 404 not found');

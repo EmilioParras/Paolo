@@ -41,80 +41,6 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     color: black; /* Cambiar el color del texto (puedes ajustarlo según tu diseño) */
 }
 
-/*----------CSS CONTAINER---------*/
-
-.containerMain {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #ffffff;
-}
-
-.container {
-    display: grid;  
-    grid-template-columns: 25% auto;
-    justify-content: center;
-}
-
-/*----------SECCION DEL PERIODISMO----------*/
-    
-.seccionPeriodismo {
-    margin: 5px 0px;
-    display: grid;
-    text-align: center;
-}
-
-.elementoPeriodismo{
-    border: 2px solid black;
-    margin: 5px;
-    padding: 10px;
-    color: black;
-    border-radius: 10px;
-    text-align: center;
-}
-
-/*----------SECCION DE LAS NOTICIAS IMPORTANTES----------*/
-
-.seccionNoticias {
-    margin: 5px 5px;
-    display: grid;
-}
-
-.elementoNoticia {
-    background-color: rgb(255, 255, 255);
-    border: 2px solid black;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.imgNoticia{
-    height: auto;
-    width: 75%;
-    display: block;
-    margin: 0 auto;
-}
-
-.parrafoNoticia {
-    font-size: 20px;
-    color: black;
-    max-width: 50%; 
-    margin: 10px auto; 
-}
-
-.boton{
-    width: 50%;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.titulo {
-    font-size: 50px;
-    text-align: center;
-    color: black;
-    display: block; 
-    margin: 10px auto;
-}
 
 /*---------SECCION TABLAS----------*/
 
@@ -130,7 +56,6 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     width: 100%;
     border-collapse: collapse;
     margin: 10px;
-    margin-top: 25px;
 }
 
 .tablaPrincipal th, .tablaPrincipal td {
@@ -153,7 +78,7 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 
 .contenedorTablas {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -167,6 +92,22 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
         margin: 10px 0;
     }
 }
+
+.contenedorTablaPrincipalYEquipos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+.contenedorEquipos {
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
 
 /*---------SECCION TEMPORADAS----------*/
 
@@ -218,14 +159,13 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 /*--------SECCION FECHAS---------*/
 
 .grid-container {
+    justify-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 30% 30% 30%;
 }
 
 .tablaFecha {
     margin: 20px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -240,6 +180,8 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 }
 
 .diaHoraPartido {
+    height: 30px;
+    width: 70px;
     background-color: #c7b255;
     font-size: 18px;
 }
@@ -255,15 +197,27 @@ table {
 }
 
 .imgEquipo {
-    height: 18px;
-    width: 18px;
-}
-
-.tablaFecha td {
-    width: 50px;
-    height: 30px;
+    height: 20px;
+    width: 20px;
 }
 
 .tablaFecha .resultado {
-    width: 20px;
+    width: 35px;
+}
+
+.tdNombreEquipos {
+    background-color: rgb(228, 228, 225);
+}
+
+/*---------SECCION PLANTEL---------*/
+
+.containerPlantel{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+}
+
+.imagenEquipo{
+    height: 150px;
+    width: 150px;
 }
