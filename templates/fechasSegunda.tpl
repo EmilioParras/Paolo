@@ -15,7 +15,7 @@
                         <td class="resultado"></td>
                         <td class="tdNombreEquipos"><img src="images/equipos2da/juventus2da.png" class="imgEquipo"><br><span>Juventus</span></td>
                     </tr>
-
+                
                     <tr>
                         <td class="diaHoraPartido"><span> <br> </span></td>
                         <td class="tdNombreEquipos"><img src="images/equipos2da/benfica2da.png" class="imgEquipo"><br><span>Benfica</span></td>

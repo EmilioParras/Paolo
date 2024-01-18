@@ -9,7 +9,6 @@
 
     </div>
 
-
     <div>
         {foreach from=$jugadores item=$jugador}
             <p>{$jugador->tag}</p>

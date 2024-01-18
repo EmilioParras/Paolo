@@ -152,10 +152,6 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     justify-content: center; 
 }
 
-.divEquipoCampeon img {
-    max-width: 100%; 
-}
-
 /*--------SECCION FECHAS---------*/
 
 .grid-container {
@@ -213,7 +209,7 @@ table {
 
 .containerPlantel{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
 }
 

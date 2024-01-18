@@ -25,6 +25,23 @@
             return $equiposTemporada;
         }
 
+        public function getEquiposTemporadabyId($id) {
+            $query = $this->db->prepare("SELECT equipos.*, temporadas.*, equipos.escudoEquipo AS imagen_blob
+                                        FROM equipos
+                                        JOIN temporadas ON equipos.ID_temporadaDeJuego = temporadas.ID 
+                                        WHERE temporadas.ID = ?
+                                        ORDER BY equipos.nombre");
+            $query->execute([$id]);
+            $equiposTemporada = $query->fetchAll(PDO::FETCH_OBJ);
+        
+            foreach ($equiposTemporada as $equipo) {
+                $imagenBase64 = base64_encode($equipo->imagen_blob);
+                $equipo->escudoEquipo = 'data:image/png;base64,' . $imagenBase64;
+            }
+        
+            return $equiposTemporada;
+        }
+
         public function getEquiposTemporada() {
             $query = $this->db->prepare ("SELECT *
                                         from equipos 

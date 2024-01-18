@@ -16,17 +16,37 @@
             return $allTemporadas;
         }
 
-        public function getJugadoresCampeonesTemporada() {
+        public function getJugadoresCampeonesTemporada($id) {
             $query = $this->db->prepare("SELECT *
                                         FROM jugadores
                                         JOIN jugadorxtemporada
-                                        ON jugadores.ID = jugadorxtemporada.ID_Jugador
+                                        ON jugadorxtemporada.ID_Jugador = jugadores.ID
+                                        JOIN equipos
+                                        ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo
                                         JOIN temporadas
-                                        ON jugadorxtemporada.ID_Temporada = temporadas.ID && jugadorxtemporada.ID_equipoTemporada = temporadas.ID_equipoCampeon");
-            $query->execute([]);
+                                        ON temporadas.ID_equipoCampeon = equipos.ID_equipo
+                                        WHERE temporadas.ID = ?");
+            $query->execute([$id]);
 
             $equipoCampeon = $query->fetchAll(PDO::FETCH_OBJ);
             return $equipoCampeon;
         }
+
+        public function getImagenCampeones($id) {
+            $query = $this->db->prepare("SELECT *
+                                        FROM temporadas
+                                        WHERE temporadas.ID = ?");
+            $query->execute([$id]);
+
+            $equipoCampeon = $query->fetchAll(PDO::FETCH_OBJ);
+
+            foreach ($equipoCampeon as $imagen) {
+                $imagenBase64 = base64_encode($imagen->imagen_blob);
+                $imagen->imagenCampeones = 'data:image/png;base64,' . $imagenBase64;
+            }
+
+            return $equipoCampeon;
+        }
+
         
     }

@@ -31,12 +31,14 @@ require_once './libs/smarty-4.3.4/libs/Smarty.class.php';
         $this->smarty->display('templates/fechasTercera.tpl');
        }
 
-       public function showDatosTemporadaById($jugadoresTemporadaGoles, $jugadoresTemporadaAsist, $jugadoresTemporadaVallas, $jugadoresCampeonesTemporada, $allTemporadas) {
+       public function showDatosTemporadaById($jugadoresTemporadaGoles, $jugadoresTemporadaAsist, $jugadoresTemporadaVallas, $equipoCampeon, $imagenCampeones, $allTemporadas, $equiposTemporada) {
         $this->smarty->assign('temporadas', $allTemporadas);
         $this->smarty->assign('jugadoresGoles', $jugadoresTemporadaGoles);
         $this->smarty->assign('jugadoresAsist', $jugadoresTemporadaAsist);
         $this->smarty->assign('jugadoresVallas', $jugadoresTemporadaVallas);
-        $this->smarty->assign('campeones', $jugadoresCampeonesTemporada);
+        $this->smarty->assign('datosEquipoCampeon', $equipoCampeon);
+        $this->smarty->assign('datosTemporada', $imagenCampeones);
+        $this->smarty->assign('equipos', $equiposTemporada);
         $this->smarty->display('templates/temporada.tpl');
        }
 

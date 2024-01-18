@@ -49,11 +49,13 @@ require_once './app/views/temporadasView.php';
 
         public function showDatosTemporadaById($id) {
             $allTemporadas = $this->temporadasModel->getAllTemporadas();
-            $jugadoresCampeonesTemporada = $this->temporadasModel->getJugadoresCampeonesTemporada($id);
+            $equipoCampeon = $this->temporadasModel->getJugadoresCampeonesTemporada($id);
+            $imagenCampeones = $this->temporadasModel->getImagenCampeones($id);
             $jugadoresTemporadaGoles = $this->jugadoresModel->getJugadoresTemporadaGoles($id);
             $jugadoresTemporadaAsist = $this->jugadoresModel->getJugadoresTemporadaAsistencias($id);
             $jugadoresTemporadaVallas = $this->jugadoresModel->getJugadoresTemporadaVallas($id);
-            $this->temporadasView->showDatosTemporadaById($jugadoresTemporadaGoles, $jugadoresTemporadaAsist, $jugadoresTemporadaVallas, $jugadoresCampeonesTemporada, $allTemporadas);  
+            $equiposTemporada = $this->equiposModel->getEquiposTemporadabyId($id);
+            $this->temporadasView->showDatosTemporadaById($jugadoresTemporadaGoles, $jugadoresTemporadaAsist, $jugadoresTemporadaVallas, $equipoCampeon, $imagenCampeones, $allTemporadas, $equiposTemporada);  
         }
 
 

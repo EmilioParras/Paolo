@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 
-<h1 style=" display:flex; justify-content: center; margin-top: 10px;">Temporada </h1>
+<h1 style=" display:flex; justify-content: center; margin-top: 10px;">Temporada {foreach from=$datosTemporada item=$numeroTemporada}{$numeroTemporada->numeroTemporada}{/foreach}</h1>
 
 <div class="contenedorTablas">
 
@@ -8,18 +8,22 @@
 
         <div class="divEquipoCampeon"> 
             <h2>Equipo Campeón</h2>
-            <img src="">
-            <p>
-            jugador1
-            j2
-            j2
-            </p>
+            {foreach from=$datosTemporada item=$imagen}
+                <img src="{$imagen->imagenCampeones}" style="height: 250px; width:250px; margin-bottom:20px"></img>
+            {/foreach}
+            {foreach from=$datosEquipoCampeon item=$info}
+                <p>{$info->tag}</p>
+            {/foreach}
         </div>
 
-        <div class="divEquipos">
-            <h2>Equipos de la temporada</h2>
-            
-        </div>
+        <div class="contenedorEquipos">
+        {foreach from=$equipos item=$equipo}
+            <div class="infoEquipo">
+                <h4>{$equipo->nombre}</h4>
+                <a href="equipo/{$equipo->ID_equipo}"><img src="{$equipo->escudoEquipo}" style="height: 60px; width:60px; margin-bottom:20px"></img></a>
+            </div>
+        {/foreach}    
+    </div>
 
     </div>
 

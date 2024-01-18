@@ -3,11 +3,13 @@
 <div class="contenedorTablas">
 
     <div class="contenedorTablaPrincipalYEquipos">
+    
         <div class="tablaPrincipal">
             <table>
                 <tr>
                     <th colspan="10"  class="tituloTabla">Tabla puntos</th>
                 </tr>
+                
                 <tr>
                     <th>#</th>
                     <th>Equipo</th>
