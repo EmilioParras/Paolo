@@ -41,8 +41,8 @@
         <div class="contenedorEquipos">
             {foreach from=$equipos item=$equipo}
                 <div class="infoEquipo">
-                    <h4>{$equipo->nombre}</h4>
-                    <a href="equipo/{$equipo->ID_equipo}"><img src="{$equipo->escudoEquipo}" style="height: 50px; width:50px;"></img></a>
+                    <h4 class="nombreEquipo">{$equipo->nombre}</h4>
+                    <a href="equipo/{$equipo->ID_equipo}"><img src="{$equipo->escudoEquipo}" style="height: 60px; width:60px; margin-bottom:10px"></img></a>
                 </div>
             {/foreach}    
         </div>

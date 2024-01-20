@@ -7,23 +7,27 @@
     <div class="divTemporadaPrincipal">
 
         <div class="divEquipoCampeon"> 
-            <h2>Equipo Campeón</h2>
+            <h1 style="font-size:56px; margin-bottom:10px;">Equipo Campeón</h1>
             {foreach from=$datosTemporada item=$imagen}
-                <img src="{$imagen->imagenCampeones}" style="height: 250px; width:250px; margin-bottom:20px"></img>
+                <img src="{$imagen->imagenCampeones}" style="height: 450px; width:450px;"></img>
             {/foreach}
-            {foreach from=$datosEquipoCampeon item=$info}
-                <p>{$info->tag}</p>
-            {/foreach}
+            <div class="jugadoresCampeones">
+                {foreach from=$datosEquipoCampeon item=$info}
+                    <p style="margin-top: 3px;">{$info->tag}</p>
+                {/foreach}
+            </div>
         </div>
 
         <div class="contenedorEquipos">
-        {foreach from=$equipos item=$equipo}
-            <div class="infoEquipo">
-                <h4>{$equipo->nombre}</h4>
-                <a href="equipo/{$equipo->ID_equipo}"><img src="{$equipo->escudoEquipo}" style="height: 60px; width:60px; margin-bottom:20px"></img></a>
-            </div>
-        {/foreach}    
-    </div>
+            {foreach from=$equipos item=$equipo}
+                <a href="equipo/{$equipo->ID_equipo}" style="text-decoration: none; color:black;">
+                    <div class="infoEquipo">
+                        <h4 class="nombreEquipo">{$equipo->nombre}</h4>
+                        <img src="{$equipo->escudoEquipo}" style="height: 60px; width:60px; margin-bottom:10px"></img>
+                    </div>
+                </a>    
+            {/foreach}    
+        </div>
 
     </div>
 

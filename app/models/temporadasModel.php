@@ -25,7 +25,8 @@
                                         ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo
                                         JOIN temporadas
                                         ON temporadas.ID_equipoCampeon = equipos.ID_equipo
-                                        WHERE temporadas.ID = ?");
+                                        WHERE temporadas.ID = ?
+                                        ORDER BY jugadores.tag ASC");
             $query->execute([$id]);
 
             $equipoCampeon = $query->fetchAll(PDO::FETCH_OBJ);
@@ -33,7 +34,7 @@
         }
 
         public function getImagenCampeones($id) {
-            $query = $this->db->prepare("SELECT *
+            $query = $this->db->prepare("SELECT temporadas.*, imagenCampeones AS imagen_blob
                                         FROM temporadas
                                         WHERE temporadas.ID = ?");
             $query->execute([$id]);
