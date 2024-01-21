@@ -7,7 +7,7 @@
         <div class="tablaPrincipal">
             <table>
                 <tr>
-                    <th colspan="10"  class="tituloTabla">Tabla puntos</th>
+                    <th colspan="10" class="tituloTabla" style="font-size:32px; margin:0; padding:0;">TABLA PUNTOS</th>
                 </tr>
                 
                 <tr>
@@ -26,7 +26,7 @@
                 {foreach from=$equipos item=$equipo}
                     <tr>
                         <td>{counter}</td>
-                        <td><img src="{$equipo->escudoEquipo}" style="margin-right:5px; height: 20px; width:20px;"></img>{$equipo->nombre}</td>
+                        <td><img src="{$equipo->escudoEquipo}" style="margin-right:10px; height: 40px;"></img>{$equipo->nombre}</td>
                         <td>{$equipo->puntos}</td>
                         <td>{$equipo->partidosJugados}</td>
                         <td>{$equipo->partidosGanados}</td>
@@ -45,8 +45,10 @@
             {foreach from=$equipos item=$equipo}
                 <a href="equipo/{$equipo->ID_equipo}" style="text-decoration: none; color:black;">
                     <div class="infoEquipo">
-                        <h4 class="nombreEquipo">{$equipo->nombre}</h4>
-                        <img src="{$equipo->escudoEquipo}" style="height: 60px; width:60px; margin-bottom:10px"></img>
+                        <div>
+                            <h4 class="nombreEquipo">{$equipo->nombre}</h4>
+                            <img src="{$equipo->escudoEquipo}" style="height:60px;m"></img>                    
+                        </div>
                     </div>
                 </a>    
             {/foreach}   

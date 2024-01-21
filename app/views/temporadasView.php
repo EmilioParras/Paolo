@@ -53,4 +53,10 @@ require_once './libs/smarty-4.3.4/libs/Smarty.class.php';
         $this->smarty->display('templates/equipo.tpl');
        }
 
+       public function showEquipoPasado($jugadoresEquipo, $infoEquipo) {
+        $this->smarty->assign('jugadores', $jugadoresEquipo);
+        $this->smarty->assign('equipo', $infoEquipo);
+        $this->smarty->display('templates/equipoPasado.tpl');
+       }
+
     }

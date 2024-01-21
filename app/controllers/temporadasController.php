@@ -43,8 +43,13 @@ require_once './app/views/temporadasView.php';
         public function showEquipo($id) {
             $equipo = $this->equiposModel->getEquipoId($id);
             $jugadoresEquipo = $this->jugadoresModel->getJugadoresPorEquipo($id);
-            $this->temporadasView->showEquipo($jugadoresEquipo, $equipo);
-            
+            $this->temporadasView->showEquipo($jugadoresEquipo, $equipo);   
+        }
+
+        public function showEquipoPasado($idTemporada, $idEquipo) {
+            $infoEquipo = $this->equiposModel->getEquipoId($idEquipo);
+            $jugadoresEquipo = $this->jugadoresModel->getJugadoresEquipoPasado($idTemporada, $idEquipo);
+            $this->temporadasView->showEquipoPasado($jugadoresEquipo, $infoEquipo);   
         }
 
         public function showDatosTemporadaById($id) {

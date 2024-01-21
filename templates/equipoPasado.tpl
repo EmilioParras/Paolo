@@ -19,9 +19,9 @@
                 </div>
             </div>
             <h2>Estadisticas</h2>
-            <p style="font-size: 20px;">Goles: {$jugador->goles}</p>
-            <p style="font-size: 20px;">Asistencias: {$jugador->asistencias}</p>
-            <p style="font-size: 20px;">Vallas: {$jugador->vallas}</p>
+            <p style="font-size: 20px;">Goles: {$jugador->golesTemporada}</p>
+            <p style="font-size: 20px;">Asistencias: {$jugador->asistenciasTemporada}</p>
+            <p style="font-size: 20px;">Vallas: {$jugador->vallasTemporada}</p>
         </div>
         {/foreach}
 

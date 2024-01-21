@@ -119,7 +119,7 @@
         }
 
         public function getJugadoresPorEquipo($id) {
-            $query = $this->db->prepare("SELECT jugadores.*, jugadores.avatar AS imagen_blob
+            $query = $this->db->prepare("SELECT *
                                         FROM jugadores 
                                         JOIN equipos
                                         ON jugadores.ID_EquipoActual = equipos.ID_equipo
@@ -130,11 +130,25 @@
 
             $jugadoresEquipo = $query->fetchAll(PDO::FETCH_OBJ);
 
-            foreach ($jugadoresEquipo as $jugador) {
-                $imagenBase64 = base64_encode($jugador->imagen_blob);
-                $jugador->avatar = 'data:image/png;base64,' . $imagenBase64;
-            }
             return $jugadoresEquipo;
         }
 
+
+        public function getJugadoresEquipoPasado($idTemporada, $idEquipo) {
+            $query = $this->db->prepare("SELECT * FROM jugadores
+                                        JOIN jugadorxtemporada
+                                        ON jugadorxtemporada.ID_Jugador = jugadores.ID
+                                        JOIN temporadas
+                                        ON jugadorxtemporada.ID_Temporada = temporadas.ID
+                                        JOIN equipos
+                                        ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo
+                                        WHERE temporadas.ID = ? && equipos.ID_equipo = ?
+                                        ORDER BY jugadores.tag ASC");
+
+            $query->execute([$idTemporada, $idEquipo]);
+
+            $jugadoresEquipo = $query->fetchAll(PDO::FETCH_OBJ);
+
+            return $jugadoresEquipo;
+        }
     }

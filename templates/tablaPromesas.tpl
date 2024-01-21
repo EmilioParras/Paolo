@@ -3,11 +3,13 @@
 <div class="contenedorTablas">
 
     <div class="contenedorTablaPrincipalYEquipos">
+    
         <div class="tablaPrincipal">
             <table>
                 <tr>
-                    <th colspan="10"  class="tituloTabla">Tabla puntos</th>
+                    <th colspan="10" class="tituloTabla" style="font-size:32px; margin:0; padding:0;">TABLA PUNTOS</th>
                 </tr>
+                
                 <tr>
                     <th>#</th>
                     <th>Equipo</th>
@@ -24,7 +26,7 @@
                 {foreach from=$equipos item=$equipo}
                     <tr>
                         <td>{counter}</td>
-                        <td><img src="{$equipo->escudoEquipo}" style="margin-right:5px; height: 20px; width:20px;"></img>{$equipo->nombre}</td>
+                        <td><img src="{$equipo->escudoEquipo}" style="margin-right:10px; height: 40px;"></img>{$equipo->nombre}</td>
                         <td>{$equipo->puntos}</td>
                         <td>{$equipo->partidosJugados}</td>
                         <td>{$equipo->partidosGanados}</td>
@@ -37,14 +39,19 @@
                 {/foreach}
             </table>
         </div>
-
+        
         <div class="contenedorEquipos">
+            
             {foreach from=$equipos item=$equipo}
-                <div class="infoEquipo">
-                    <h4 class="nombreEquipo">{$equipo->nombre}</h4>
-                    <a href="equipo/{$equipo->ID_equipo}"><img src="{$equipo->escudoEquipo}" style="height: 60px; width:60px; margin-bottom:10px"></img></a>
-                </div>
-            {/foreach}    
+                <a href="equipo/{$equipo->ID_equipo}" style="text-decoration: none; color:black;">
+                    <div class="infoEquipo">
+                        <div>
+                            <h4 class="nombreEquipo">{$equipo->nombre}</h4>
+                            <img src="{$equipo->escudoEquipo}" style="height:60px;m"></img>                    
+                        </div>
+                    </div>
+                </a>    
+            {/foreach}   
         </div>
     </div>   
 
@@ -52,18 +59,15 @@
         <tr>
             <th colspan="2" class="tituloTabla">Goleadores</th>
         </tr>
-        
         <tr>
             <th>Jugador</th>
             <th>Goles</th>
         </tr>
         {foreach from=$jugadores item=$jugador}
-            {if $jugador->golesTemporada>0}
-                <tr>    
-                    <th>{$jugador->tag}</th>
-                    <th>{$jugador->golesTemporada}</th>
-                </tr>
-            {/if}
+            <tr>
+                <th>{$jugador->tag}</th>
+                <th>{$jugador->golesTemporada}</th>
+            </tr>
         {/foreach}
     </table>
 
@@ -76,12 +80,10 @@
             <th>Asistencias</th>
         </tr>
         {foreach from=$jugadores item=$jugador}
-            {if $jugador->asistenciasTemporada>0}
-                <tr>    
-                    <th>{$jugador->tag}</th>
-                    <th>{$jugador->asistenciasTemporada}</th>
-                </tr>
-            {/if}
+            <tr>
+                <th>{$jugador->tag}</th>
+                <th>{$jugador->asistenciasTemporada}</th>
+            </tr>
         {/foreach}
     </table>
 
@@ -94,12 +96,10 @@
             <th>Vallas</th>
         </tr>
         {foreach from=$jugadores item=$jugador}
-            {if $jugador->vallasTemporada>0}
-                <tr>    
-                    <th>{$jugador->tag}</th>
-                    <th>{$jugador->vallasTemporada}</th>
-                </tr>
-            {/if}
+            <tr>
+                <th>{$jugador->tag}</th>
+                <th>{$jugador->vallasTemporada}</th>
+            </tr>
         {/foreach}
     </table>
 </div>

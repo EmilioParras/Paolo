@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900'); /* NORMAL */
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans Math', sans-serif;
+    font-family: 'Poppins', sans-serif; /*Noto Sans Math*/
+    font-weight: 300;
+    line-height: 1.7;
     box-sizing: border-box;
+    user-select: none;
 }
 
 /*----------CSS DEL HEADER----------*/
@@ -14,15 +19,31 @@
 .divHeader {
     padding: 50px;
     text-align: center;
-    background-color: black;/* Añadir este estilo para que el texto sea blanco */
+    background-color: #2B2E38 ;/* Añadir este estilo para que el texto sea blanco */
+}
+
+.divHeader img {
+    margin-bottom: 5px; /* Distanciar entre el logo y el texto */
+    pointer-events: none;
+}
+
+.divHeader h3 {
+    color: white;
+    font-size: 20px; /* Nombre del servidor */
+    font-weight: bold;
 }
 
 .navMain {
-    background-color: #c7b255;
+    background-color: #FFEBA7;
+    box-shadow: 0 0 7 7px #FFEBA7;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
+}
+
+.navMain li a {
+    margin: 30px; /* Separar las secciones */
 }
 
 ul.itemsBarraNavegacion {
@@ -31,40 +52,60 @@ ul.itemsBarraNavegacion {
     margin-top: 15px;
 }
 
-ul.itemsBarraNavegacion li {
-    margin: 0 15px; /* Añadir espacio entre los elementos de la lista */
+ul.itemsBarraNavegacion .dropDown {
+    margin-right: 30px; /* Añadir espacio entre los elementos de la lista */
 }
 
 ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     text-decoration: none; /* Quitar la decoración de enlace */
-    font-size: 25px; /* Tamaño de fuente de 20px */
-    color: black; /* Cambiar el color del texto (puedes ajustarlo según tu diseño) */
+    font-size: 15px; /* Tamaño de fuente de 20px */
+    font-weight: bold; /* Cambiar el color del texto (puedes ajustarlo según tu diseño) */
+    color: #2B2E38;
 }
 
 
 /*---------SECCION TABLAS----------*/
 
 .tituloTabla {
-    background-color: black;
+    background-color: #2B2E38;
     color: white;
     padding: 10px;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 .tablaPrincipal {
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
+}
+    
+
+.tablaPrincipal  table {
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
 }
 
 .tablaPrincipal th, .tablaPrincipal td {
-    border: 1px solid black;
+    border: 1px solid #2B2E38;
     padding: 8px;
     text-align: center;
+    font-size: 15px;
+}
+
+.tablaPrincipal tr:nth-child(even){
+    background: #FFFFFF;
+}
+
+.tablaPrincipal th {
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .tablaEstadisticas {
     width: 30%;
     margin: 10px;
+    border-radius: 10px;
     border-collapse: collapse;
 }
 
@@ -72,12 +113,15 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     border: 1px solid black;
     padding: 8px;
     text-align: center;
+    font-size: 15px;
 }
 
 .contenedorTablas {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -96,6 +140,7 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     grid-template-columns: 2fr 1fr;
     padding: 10px;
     height: 100%;
+    overflow: hidden;
 }
 
 .contenedorEquipos {
@@ -162,13 +207,22 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     text-align: center;
 }
 
+.infoEquipo img {
+    pointer-events: none;
+}
+
 .infoEquipo{
-    height: 150px;
+    width: 225px;
+    height: 190px;
+    padding-top: 21px;
     text-decoration: none;
     background-color: rgb(241, 239, 233);
     margin: 10px;
-    border: 1px solid black;
-    box-shadow: 5px 5px 15px rgba(169, 168, 168, 0.5);
+    border-radius: 5px;
+    box-shadow: 5px 5px 12px rgba(192, 191, 191, 0.5);
+}
+.infoEquipo:hover{
+    box-shadow: 5px 5px 5px rgba(192, 191, 191, 0.5);
 }
 
 /*--------SECCION FECHAS---------*/
@@ -231,7 +285,7 @@ table {
 }
 
 .divImagenEquipo{
-    height: 66vh;
+    height: 55vh;
     display: flex;
     text-align: center;
     align-items: center;
@@ -239,8 +293,7 @@ table {
 }
 
 .imagenEquipo {
-    height: 75%;
-    width: 30%;
+    height: 50vh;
 }
 
 .jugadoresEquipo{
@@ -250,15 +303,60 @@ table {
 }
 
 .cardJugador {
-    display: block;
+    display: flex;
     text-align: center;
     margin: 20px;
     padding: 5px;
-    box-shadow: 5px 5px 15px rgba(122, 121, 121, 0.5);;
+    box-shadow: 5px 5px 15px rgba(122, 121, 121, 0.5);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .jugadorImg{
     height: 100px;
     width: 100px;
     margin-bottom: 5px;
+}
+
+.divJugador{
+    background-color: rgb(228, 113, 113);
+    border-radius: 50%;
+    border: 5px solid black;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cardJugador {
+    margin:15px;
+}
+
+.avatarJugador{
+    justify-content: center;
+    color: white;
+    margin: 0px;
+}
+
+/* -----------SCROLLBAR----------- */
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #1F2029;
+    border: 1px solid #2B2E38;
+}  
+
+table td:nth-child(add) tr {
+    background-color: black;
 }
