@@ -32,13 +32,10 @@ require_once './app/views/temporadasView.php';
 
         public function showFechas($id) {
             if($id == 1) {
-                $this->
                 $this->temporadasView->showFechasPrimera();
             } else if($id == 2) {
-                $this->
                 $this->temporadasView->showFechasSegunda();
             } else if ($id == 3){
-                $this->
                 $this->temporadasView->showFechasTercera();
             }
         }

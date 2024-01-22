@@ -113,15 +113,13 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     border: 1px solid black;
     padding: 8px;
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .contenedorTablas {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    border-radius: 15px;
-    overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -337,7 +335,7 @@ table {
 }
 
 .avatarJugador{
-    margin: 0px;
+    margin: 0;
     justify-content: center;
     color: white;
 }
@@ -359,4 +357,95 @@ body::-webkit-scrollbar-thumb {
 
 table td:nth-child(add) tr {
     background-color: black;
+}
+
+/*----------ESTILOS FOOTER----------*/
+    
+footer {
+    width: 100%;
+    background: #1F2029;
+    background: linear-gradient(360deg, #1F2029 75%, white 450%);
+   
+    padding: 15px;
+    margin-top: 60px;
+}
+
+.containerFooter {
+    display: grid;
+    grid-template-columns: 35% 25% 40%;
+}
+
+.divFooterIMG {
+    padding: 20px;
+    text-align: start;
+    display: flex;
+}
+
+.h3Footer {
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.h3Titulo{
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    transform: translateY(40px);
+}
+
+.text-png {
+    transform: translateY(40px);
+}
+
+.columns {
+    display: flex;
+}
+
+.linkRed {
+    text-decoration: none;
+    color: #FFEBA7;
+}
+
+.redes {
+    margin-right: 100px;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.footer-menu-redes {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu-credits {
+    list-style: none;
+    padding: 0;
+    color: #FFEBA7;
+}
+
+.footer-menu-credits li {
+    display: flex;
+    margin-top: 5px;
+    text-align: center;
+    align-items: center;
+}
+.footer-menu li {
+    margin-bottom: 5px;
+    color: #FFEBA7;
+}
+
+.imgCode{
+    margin-right: 10px;
+    height: 20px; 
+    width: 20px;
+}
+.sponsors{
+    display: flex;
+}
+
+.sponsors img {
+    height: auto;
+    width: 150px;
 }

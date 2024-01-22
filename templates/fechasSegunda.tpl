@@ -464,3 +464,4 @@
 
 </body>
     
+{include file="footer.tpl"}

@@ -14,3 +14,5 @@
     </div>
     
 </main> 
+
+{include file="footer.tpl"}
