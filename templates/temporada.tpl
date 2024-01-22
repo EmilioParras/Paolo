@@ -9,7 +9,7 @@
         <div class="divEquipoCampeon"> 
             <h1 style="font-size:56px; margin-bottom:10px;">Equipo Campeón</h1>
             {foreach from=$datosTemporada item=$imagen}
-                <img src="{$imagen->imagenCampeones}" style="height: 450px; width:450px;"></img>
+                <img src="{$imagen->imagenCampeones}" style="height: 450px; width:520px;"></img>
             {/foreach}
             <div class="jugadoresCampeones">
                 {foreach from=$datosEquipoCampeon item=$info}
@@ -42,7 +42,7 @@
             {foreach from=$jugadoresGoles item=$jugador}
                 {if $jugador->golesTemporada>0}
             <tr>    
-                <th>{$jugador->tag}</th>
+                <th><img src="{$jugador->escudoEquipo}" style="height: 25px; width:25px; margin-right:5px;"></img>{$jugador->tag}</th>
                 <th>{$jugador->golesTemporada}</th>
             </tr>
                 {/if}
@@ -60,7 +60,7 @@
             {foreach from=$jugadoresAsist item=$jugador}
                 {if $jugador->asistenciasTemporada>0}
             <tr>    
-                <th>{$jugador->tag}</th>
+                <th><img src="{$jugador->escudoEquipo}" style="height: 25px; width:25px; margin-right:5px;"></img>{$jugador->tag}</th>
                 <th>{$jugador->asistenciasTemporada}</th>
             </tr>
                 {/if}
@@ -78,7 +78,7 @@
             {foreach from=$jugadoresVallas item=$jugador}
                 {if $jugador->vallasTemporada>0}
             <tr>    
-                <th>{$jugador->tag}</th>
+                <th><img src="{$jugador->escudoEquipo}" style="height: 25px; width:25px; margin-right:5px;"></img>{$jugador->tag}</th>
                 <th>{$jugador->vallasTemporada}</th>
             </tr>
                 {/if}

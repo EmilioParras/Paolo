@@ -10,18 +10,22 @@ class TablasView {
         $this->smarty = new Smarty();
     }
 
-    public function showTabla($equiposTemporada, $allTemporadas, $jugadoresTemporada) {
-        $this->smarty->assign('temporadas', $allTemporadas);
-        $this->smarty->assign('jugadores', $jugadoresTemporada);
+    public function showTabla($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada) {
+        $this->smarty->assign('jugadoresGoles', $golesTemporada);
+        $this->smarty->assign('jugadoresAsistencias', $asistenciasTemporada);
+        $this->smarty->assign('jugadoresVallas', $vallasTemporada);
         $this->smarty->assign('equipos', $equiposTemporada);
         $this->smarty->display('templates/tablaActual.tpl');
     }
 
-    public function showTablaPromesas($equiposTemporada, $allTemporadas, $jugadoresTemporada) {
-        $this->smarty->assign('temporadas', $allTemporadas);
-        $this->smarty->assign('jugadores', $jugadoresTemporada);
+    public function showTablaPromesas($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada) {
+        $this->smarty->assign('jugadoresGoles', $golesTemporada);
+        $this->smarty->assign('jugadoresAsistencias', $asistenciasTemporada);
+        $this->smarty->assign('jugadoresVallas', $vallasTemporada);
         $this->smarty->assign('equipos', $equiposTemporada);
-        $this->smarty->display('templates/tablaPromesas.tpl');
+        $this->smarty->display('templates/tablaActual.tpl');
     }
+
+   
 
 }

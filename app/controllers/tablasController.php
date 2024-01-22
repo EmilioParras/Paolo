@@ -25,7 +25,7 @@ require_once './app/models/temporadasModel.php';
                 $equiposTemporada = $this->equiposModel->getEquiposTemporadaTabla(1);
                 $golesTemporada = $this->jugadoresModel->getJugadoresTemporadaGolesConDivision(1);
                 $asistenciasTemporada = $this->jugadoresModel->getJugadoresTemporadaAsistenciasConDivision(1);
-                $vallasTemporada = $this->jugadoresModel->getJugadoresTemporadaVallasConDivision(2);
+                $vallasTemporada = $this->jugadoresModel->getJugadoresTemporadaVallasConDivision(1);
                 $this->tablasView->showTabla($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada);
             } else if($id == 2) {
                 $equiposTemporada = $this->equiposModel->getEquiposTemporadaTabla(2);

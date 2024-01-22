@@ -63,11 +63,13 @@
             <th>Jugador</th>
             <th>Goles</th>
         </tr>
-        {foreach from=$jugadores item=$jugador}
+        {foreach from=$jugadoresGoles item=$jugador}
+            {if $jugador->goles>0}
             <tr>
-                <th>{$jugador->tag}</th>
-                <th>{$jugador->golesTemporada}</th>
+                <th><img src="{$jugador->escudoEquipo}" style="height: 25px; width:25px; margin-right:5px;"></img>{$jugador->tag}</th>
+                <th>{$jugador->goles}</th>
             </tr>
+            {/if}
         {/foreach}
     </table>
 
@@ -79,11 +81,13 @@
             <th>Jugador</th>
             <th>Asistencias</th>
         </tr>
-        {foreach from=$jugadores item=$jugador}
+        {foreach from=$jugadoresAsistencias item=$jugador}
+            {if $jugador->asistencias>0}
             <tr>
-                <th>{$jugador->tag}</th>
-                <th>{$jugador->asistenciasTemporada}</th>
+                <th><img src="{$jugador->escudoEquipo}" style="height: 25px; width:25px; margin-right:5px;"></img>{$jugador->tag}</th>
+                <th>{$jugador->asistencias}</th>
             </tr>
+            {/if}
         {/foreach}
     </table>
 
@@ -95,11 +99,13 @@
             <th>Jugador</th>
             <th>Vallas</th>
         </tr>
-        {foreach from=$jugadores item=$jugador}
+        {foreach from=$jugadoresVallas item=$jugador}
+            {if $jugador->vallas>0}
             <tr>
-                <th>{$jugador->tag}</th>
-                <th>{$jugador->vallasTemporada}</th>
+                <th><img src="{$jugador->escudoEquipo}" style="height: 25px; width:25px; margin-right:5px;"></img>{$jugador->tag}</th>
+                <th>{$jugador->vallas}</th>
             </tr>
+            {/if}
         {/foreach}
     </table>
 </div>

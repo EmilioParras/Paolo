@@ -68,6 +68,10 @@
 
             return $equipo;
         }
+
+        public function getEquiposTemporadaDivision($temporada, $divison) {
+            
+        }
         
 
     }

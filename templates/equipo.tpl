@@ -15,7 +15,7 @@
             <p style="font-size: 42px; margin: 0px;">{$jugador->tag}</p>
             <div class="divJugador">
                 <div>
-                    <h2 class="avatarJugador">{$jugador->avatar}</h2>
+                    <p class="avatarJugador" style="font-size: 52px;">{$jugador->avatar}</p>
                 </div>
             </div>
             <h2>Estadisticas</h2>
