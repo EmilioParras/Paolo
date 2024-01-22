@@ -19,7 +19,7 @@
         <div class="divHeader">
             <img width="100px" height="100px" src="./images/PG-PNGBLANCO.png" alt="icono">
             <h3>Futbol Champagne a lo Paolo</h3>
-        </div>
+    </div>
 
             <nav class="navMain">
                 <ul class="itemsBarraNavegacion">

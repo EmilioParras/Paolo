@@ -24,6 +24,8 @@
             <p style="font-size: 20px;">Vallas: {$jugador->vallas}</p>
         </div>
         {/foreach}
-
+        <footer style="width: 100%; height: 100px background-color: #000000"></footer>
     </div>
 </div>
+
+{include file="footer.tpl"}
