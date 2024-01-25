@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif; /*Noto Sans Math*/
+    font-family: 'Poppins', sans-serif; 
     font-weight: 300;
     line-height: 1.7;
     box-sizing: border-box;
@@ -19,17 +19,17 @@
 .divHeader {
     padding: 50px;
     text-align: center;
-    background-color: #2B2E38 ;/* Añadir este estilo para que el texto sea blanco */
+    background-color: #2B2E38 ;
 }
 
 .divHeader img {
-    margin-bottom: 5px; /* Distanciar entre el logo y el texto */
+    margin-bottom: 5px; 
     pointer-events: none;
 }
 
 .divHeader h3 {
     color: white;
-    font-size: 20px; /* Nombre del servidor */
+    font-size: 20px; 
     font-weight: bold;
 }
 
@@ -43,23 +43,23 @@
 }
 
 .navMain li a {
-    margin: 30px; /* Separar las secciones */
+    margin: 30px; 
 }
 
 ul.itemsBarraNavegacion {
     display: flex;
-    list-style: none; /* Quitar las viñetas de la lista */
+    list-style: none; 
     margin-top: 15px;
 }
 
 ul.itemsBarraNavegacion .dropDown {
-    margin-right: 30px; /* Añadir espacio entre los elementos de la lista */
+    margin-right: 30px; 
 }
 
 ul.itemsBarraNavegacion li a, a.dropdown-toggle {
-    text-decoration: none; /* Quitar la decoración de enlace */
-    font-size: 15px; /* Tamaño de fuente de 20px */
-    font-weight: bold; /* Cambiar el color del texto (puedes ajustarlo según tu diseño) */
+    text-decoration: none; 
+    font-size: 15px;
+    font-weight: bold; 
     color: #2B2E38;
 }
 
@@ -87,10 +87,10 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 }
 
 .tablaPrincipal th, .tablaPrincipal td {
-    border: 1px solid #2B2E38;
+    border: 2px solid #2B2E38;
     padding: 8px;
     text-align: center;
-    font-size: 15px;
+    font-size: 22px;
 }
 
 .tablaPrincipal tr:nth-child(even){
@@ -105,7 +105,6 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 .tablaEstadisticas {
     width: 30%;
     margin: 10px;
-    border-radius: 10px;
     border-collapse: collapse;
 }
 
@@ -161,23 +160,30 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     margin: 25px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px; /* Ajusta el espacio entre botones según sea necesario */
+    gap: 20px; 
+}
+
+.hrefTemporada{
+    background-color: #2a2c30;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    padding: 15px;
+    font-size: 36px;
+    border-radius: 10px;
 }
 
 .btnTemporada{
+    background-color: #2a2c30;
+    border: 0px;
     text-decoration: none;
-    padding: 15px;
-    font-size: 36px;
-    background-color: #c7b255;
-    color: black;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-.btnTemporada a {
-    color: inherit; /* Heredar el color del texto del botón */
-    text-decoration: none; /* Quitar el subrayado del enlace */
+    color: white;
 }
 
+.imgTemporada {
+    width: auto;
+    height: 60px;
+}
 
 /*----------SECCION TEMPORADA INDIVIDUAL----------*/
 
@@ -232,48 +238,58 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 }
 
 .tablaFecha {
-    margin: 20px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 15px;
 }
 
 .tablaFecha h2 {
+    height: auto;
     width: 100%;
     color: white;
     margin: 0px;
-    background-color: rgb(0, 0, 0);
+    background-color: #343434;
     text-align: center;
 }
 
-.diaHoraPartido {
-    height: 30px;
-    width: 70px;
-    background-color: #c7b255;
-    font-size: 18px;
-}
-
 table {
+    box-shadow: 3px 3px rgb(185, 185, 185);
     border-collapse: collapse;
     width: 100%;
+    height: 90%;
 }
 
 .tablaFecha td {
+    color: black;
     border: 1px solid black;
     text-align: center;
 }
 
 .imgEquipo {
-    height: 20px;
+    margin-top: 5px;
     width: 20px;
 }
 
 .tablaFecha .resultado {
-    width: 35px;
+    font-size: 22px;
+    width: 10%;
 }
 
 .tdNombreEquipos {
+    font-size: 20px;
+    width: 30%;
     background-color: rgb(228, 228, 225);
+}
+
+.fechaHora{
+    font-weight: bold;
+    background-color: rgb(154, 154, 154);
+}
+
+.equipo1 {
+    width: 15%;
+}
+
+.equipo2 {
+    width: 15%;
 }
 
 /*---------SECCION PLANTEL---------*/
@@ -365,7 +381,6 @@ footer {
     width: 100%;
     background: #1F2029;
     background: linear-gradient(360deg, #1F2029 75%, white 450%);
-   
     padding: 15px;
     margin-top: 60px;
 }
@@ -373,6 +388,7 @@ footer {
 .containerFooter {
     display: grid;
     grid-template-columns: 35% 25% 40%;
+    border-bottom: 2px solid #2B2E38;
 }
 
 .divFooterIMG {
@@ -441,11 +457,77 @@ footer {
     height: 20px; 
     width: 20px;
 }
+
 .sponsors{
+    align-items: center;
     display: flex;
 }
 
 .sponsors img {
+    height: 105px;
+    width: auto;
+}
+
+/*---------SECCION FAQ----------*/
+
+.grid-container-faq {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.divFaq {
+    background: black;
+    border: 1px solid #838383;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.imagenFaq {
+    border-radius: 10px;
+    width: 100%;
     height: auto;
-    width: 150px;
+}
+
+.contenidoOcultoFaq {
+    color: white;
+    max-width: 100%;
+    text-align: justify;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.botonFaq {
+    background-color: rgb(223, 223, 223);
+    color: #000000;
+    border: 1px solid #838383;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.active {
+    max-height: 100%;
+}
+
+.faq-container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.divFaq, .contenidoOcultoFaq {
+    margin: 0px;
+    background: black;
+    text-align: center;
+}
+
+.pContenidoFaq {
+    text-align: left;
+    display: flex;
+    margin: 15px;
 }

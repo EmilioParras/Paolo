@@ -25,7 +25,10 @@
                 {assign var=counter value=1}
                 {foreach from=$equipos item=$equipo}
                     <tr>
-                        <td>{counter}</td>
+                        <td {if $counter == 1}style="background-color: #31C80B;" 
+                            {else if $counter == 8} style="background-color: yellow;"
+                            {else if $counter == 9} style="background-color: #e61b0c;" 
+                            {else if $counter == 10} style="background-color: #e61b0c;" {/if}>{counter}</td>
                         <td><img src="{$equipo->escudoEquipo}" style="margin-right:10px; height: 40px;"></img>{$equipo->nombre}</td>
                         <td>{$equipo->puntos}</td>
                         <td>{$equipo->partidosJugados}</td>
@@ -33,10 +36,11 @@
                         <td>{$equipo->partidosEmpatados}</td>
                         <td>{$equipo->partidosPerdidos}</td>
                         <td>{$equipo->golesFavor}</td>
-                        <td>{$equipo->golesEnContra}</td>
+                        <td>{$equipo->golesEnContra}</td>   
                         <td>{$equipo->diferencia}</td>
                     </tr>
-                {/foreach}
+                    {assign var=counter value=$counter+1}
+            {/foreach}
             </table>
         </div>
         

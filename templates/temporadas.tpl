@@ -3,14 +3,13 @@
 <main>
 
     <div class="containerTemporadas">
-        <button class="btnTemporada"><a href="temporada/1">Temporada 1</a></button>
-        <button class="btnTemporada"><a href="temporada/2">Temporada 2</a></button>
-        <button class="btnTemporada"><a href="temporada/3">Temporada 3</a></button>
-        <button class="btnTemporada"><a href="temporada/4">Temporada 4</a></button>
-        <button class="btnTemporada"><a href="temporada/5">Temporada 5</a></button>
-        <button class="btnTemporada"><a href="temporada/6">Temporada 6</a></button>
-        <button class="btnTemporada"><a href="temporada/7">Temporada 7</a></button>
-        <button class="btnTemporada"><a href="temporada/8">Temporada 8</a></button>
+        <a href="temporada/1" class="hrefTemporada"><button class="btnTemporada">Temporada 1 <img src="./images/imgTematicaTemporadas/nationsLeagueT1.png" class="imgTemporada"></button></a>
+        <a href="temporada/2" class="hrefTemporada"><button class="btnTemporada">Temporada 2 <img src="./images/imgTematicaTemporadas/libertadoresT2.png" class="imgTemporada"></button></a>
+        <a href="temporada/3" class="hrefTemporada"><button class="btnTemporada">Temporada 3 <img src="./images/imgTematicaTemporadas/championsT3.png" class="imgTemporada"></button></a>
+        <a href="temporada/4" class="hrefTemporada"><button class="btnTemporada">Temporada 4 <img src="./images/imgTematicaTemporadas/copaAmericaT4.png" class="imgTemporada"></button></a>
+        <a href="temporada/5" class="hrefTemporada"><button class="btnTemporada">Temporada 5 <img src="./images/imgTematicaTemporadas/mundialT5.png" class="imgTemporada"></button></a>
+        <a href="temporada/6" class="hrefTemporada"><button class="btnTemporada">Temporada 6 <img src="./images/imgTematicaTemporadas/premierLeagueT6.jpg" class="imgTemporada"></button></a>
+        <a href="temporada/8" class="hrefTemporada"><button class="btnTemporada">Temporada 8 <img src="./images/imgTematicaTemporadas/lpfT7-8.png" class="imgTemporada"></button></a>
     </div>
     
 </main> 

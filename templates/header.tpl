@@ -29,7 +29,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="tabla/1">Tabla primera</a></li>
                                 <li><a href="tabla/2">Tabla segunda</a></li>
-                                <li><a href="tabla/3">Tabla promesas</a></li>
+                                <li><a href="tabla/3">Tabla tercera</a></li>
                             </ul>
                         </div>
                     </li>
@@ -43,9 +43,6 @@
                         </div>
                     <li>
                         <a href="temporadas">TEMPORADAS</a>
-                    </li>
-                    <li>
-                        <a href="faq">FAQ</a>
                     </li>
                 </ul>
             </nav>

@@ -26,6 +26,10 @@ switch ($params[0]) {
         $id = $params[1];
         $temporadasController->showDatosTemporadaById($id);
         break;
+    case 'temporada/8' :
+        $temporadasController= new TemporadasController();
+        $temporadasController->showDatosTemporada8();
+        break;    
     case 'equipo' :
         $temporadasController = new TemporadasController();
         $id = $params[1];
@@ -36,11 +40,10 @@ switch ($params[0]) {
         $idTemporada = $params[1];
         $idEquipo = $params[2];
         $temporadasController->showEquipoPasado($idTemporada,$idEquipo );    
-    case 'fechas' :
+    /*case 'preguntas' :
         $temporadasController = new TemporadasController();
-        $id = $params[1];
-        $temporadasController->showFechas($id);
-        break;
+        $temporadasController->showFaq();
+        break;*/
     default:
         echo('error 404 not found');
         break;    

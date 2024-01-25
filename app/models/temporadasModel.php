@@ -48,4 +48,23 @@
 
             return $equipoCampeon;
         }
+
+        /*----------CONSULTAS PARA LA TEMPORADA 8*/
+
+        public function getJugadoresCampeonesTemporadaT8( $primera, $segunda, $tercera) {
+            $query = $this->db->prepare("SELECT *
+                                        FROM jugadores
+                                        JOIN jugadorxtemporada
+                                        ON jugadorxtemporada.ID_Jugador = jugadores.ID
+                                        JOIN equipos
+                                        ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo
+                                        JOIN temporadas
+                                        ON temporadas.ID_equipoCampeon = equipos.ID_equipo
+                                        WHERE temporadas.ID = 8
+                                        ORDER BY jugadores.tag ASC");
+            $query->execute([$id, $primera, $segunda, $tercera]);
+
+            $equipoCampeon = $query->fetchAll(PDO::FETCH_OBJ);
+            return $equipoCampeon;
+        }
     }
