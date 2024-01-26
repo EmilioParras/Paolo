@@ -24,6 +24,9 @@
             <nav class="navMain">
                 <ul class="itemsBarraNavegacion">
                     <li>
+                        <a href="inicio">INICIO</a>
+                    </li>
+                    <li>
                         <div class="dropDown"> 
                             <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">TABLA</a>
                             <ul class="dropdown-menu">

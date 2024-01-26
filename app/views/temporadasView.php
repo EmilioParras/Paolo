@@ -35,10 +35,6 @@ require_once './libs/smarty-4.3.4/libs/Smarty.class.php';
         $this->smarty->display('templates/fechasTercera.tpl');
        }
 
-       public function showFechasNoDisponibles() {
-        $this->smarty->display('fechasNoDisponibles.tpl');
-       }
-
        public function showDatosTemporadaById($jugadoresTemporadaGoles, $jugadoresTemporadaAsist, $jugadoresTemporadaVallas, $equipoCampeon, $imagenCampeones, $allTemporadas, $equiposTemporada) {
         $this->smarty->assign('temporadas', $allTemporadas);
         $this->smarty->assign('jugadoresGoles', $jugadoresTemporadaGoles);
@@ -61,8 +57,7 @@ require_once './libs/smarty-4.3.4/libs/Smarty.class.php';
         $this->smarty->display('templates/temporada.tpl');
        }
 
-       public function show($allTemporadas) {
-        $this->smarty->assign('temporadas', $allTemporadas);
+       public function show() {
         $this->smarty->display('templates/temporadaId.tpl');
        }
 

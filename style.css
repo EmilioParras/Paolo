@@ -63,6 +63,45 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     color: #2B2E38;
 }
 
+/*--------SECCION INICIO---------*/
+
+ .divInicio {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.divJugadorGolFecha{
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.h2JugadorGolFecha {
+    justify-content: center;
+    display: flex;
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.divImgJugadorFecha{
+    display: flex;
+    justify-content: center;
+}
+
+.divPrincipalInicio{
+    padding: 10px;
+    background-color: red;
+}
+
+.divPolemicas {
+    margin: 10px;
+    background-color: yellow;
+}
+
+
+
 
 /*---------SECCION TABLAS----------*/
 
@@ -164,7 +203,7 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 }
 
 .hrefTemporada{
-    background-color: #2a2c30;
+    background-color: #222429;
     text-decoration: none;
     justify-content: center;
     display: flex;
@@ -174,7 +213,7 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 }
 
 .btnTemporada{
-    background-color: #2a2c30;
+    background-color: #222429;
     border: 0px;
     text-decoration: none;
     color: white;

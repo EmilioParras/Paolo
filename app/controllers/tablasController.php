@@ -20,7 +20,6 @@ require_once './app/models/temporadasModel.php';
         }
 
         public function showTabla($id) {
-            $allTemporadas = $this->temporadasModel->getAllTemporadas();
             if($id == 1) {
                 $equiposTemporada = $this->equiposModel->getEquiposTemporadaTabla(1);
                 $golesTemporada = $this->jugadoresModel->getJugadoresTemporadaGolesConDivision(1);
