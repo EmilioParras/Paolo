@@ -13,10 +13,10 @@ if (!empty($_GET['action'])) {
 $params = explode('/', $action);
 
 switch ($params[0]) {
-    case 'inicio' :
+    /*case 'inicio' :
         $generalController = new GeneralController();
         $generalController->showInicio();
-        break;
+        break;*/
     case 'tabla' :
         $tablasController = new TablasController();
         $id = $params [1];

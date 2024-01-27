@@ -69,8 +69,19 @@
             return $equipo;
         }
 
-        public function getEquiposTemporadaDivision($temporada, $divison) {
-            
+         /*----------CONSULTAS PARA LA TEMPORADA 8-----------*/
+
+        public function getEquiposTemporadabyIdT8($temporada) {
+            $query = $this->db->prepare ("SELECT *
+                                        FROM equipos
+                                        JOIN temporadas
+                                        ON equipos.ID_temporadaDeJuego = temporadas.ID
+                                        JOIN divisiones
+                                        ON equipos.division = divisiones.numDivision
+                                        WHERE temporadas.ID = 8");
+            $query->execute($temporada);
+            $equiposTemporadaDivision = $query->fetchAll(PDO::FETCH_OBJ);
+            return $equiposTemporadaDivision;
         }
         
 
