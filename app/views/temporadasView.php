@@ -9,15 +9,6 @@ require_once './libs/smarty-4.3.4/libs/Smarty.class.php';
             $this->smarty = new Smarty();
         }
 
-       public function showInicio($allTemporadas) {
-        $this->smarty->assign('temporadas', $allTemporadas);
-        $this->smarty->display('templates/inicio.tpl');
-       }
-
-       public function showFaq() {
-        $this->smarty->display('faq.tpl');
-       }
-
        public function showTemporadas($allTemporadas) {
         $this->smarty->assign('temporadas', $allTemporadas);
         $this->smarty->display('templates/temporadas.tpl');
@@ -35,6 +26,10 @@ require_once './libs/smarty-4.3.4/libs/Smarty.class.php';
         $this->smarty->display('templates/fechasTercera.tpl');
        }
 
+       public function showFechasNoDisponibles() {
+        $this->smarty->display('templates/fechasNoDisponibles.tpl');
+       }
+
        public function showDatosTemporadaById($jugadoresTemporadaGoles, $jugadoresTemporadaAsist, $jugadoresTemporadaVallas, $equipoCampeon, $imagenCampeones, $allTemporadas, $equiposTemporada) {
         $this->smarty->assign('temporadas', $allTemporadas);
         $this->smarty->assign('jugadoresGoles', $jugadoresTemporadaGoles);
@@ -46,7 +41,7 @@ require_once './libs/smarty-4.3.4/libs/Smarty.class.php';
         $this->smarty->display('templates/temporada.tpl');
        }
 
-       public function showDatosTemporadaT8($jugadoresTemporadaGoles, $jugadoresTemporadaAsist, $jugadoresTemporadaVallas, $equipoCampeon, $imagenCampeones, $allTemporadas, $equiposTemporada) {
+       public function showDatosTemporada5($jugadoresTemporadaGoles, $jugadoresTemporadaAsist, $jugadoresTemporadaVallas, $equipoCampeon, $imagenCampeones, $allTemporadas, $equiposTemporada) {
         $this->smarty->assign('temporadas', $allTemporadas);
         $this->smarty->assign('jugadoresGoles', $jugadoresTemporadaGoles);
         $this->smarty->assign('jugadoresAsist', $jugadoresTemporadaAsist);
@@ -54,6 +49,19 @@ require_once './libs/smarty-4.3.4/libs/Smarty.class.php';
         $this->smarty->assign('datosEquipoCampeon', $equipoCampeon);
         $this->smarty->assign('datosTemporada', $imagenCampeones);
         $this->smarty->assign('equipos', $equiposTemporada);
+        $this->smarty->display('templates/temporada5.tpl');
+       }
+
+
+
+       public function showDatosTemporadaT8($jugadoresGolesTemporada8, $jugadoresAsistenciasTemporada8, $jugadoresVallasTemporada8, $equiposCampeonesT8, $imagenCampeonesT8, $allTemporadas, $equiposTemporadaT8) {
+        $this->smarty->assign('temporadas', $allTemporadas);
+        $this->smarty->assign('jugadoresGoles', $jugadoresGolesTemporada8);
+        $this->smarty->assign('jugadoresAsist', $jugadoresAsistenciasTemporada8);
+        $this->smarty->assign('jugadoresVallas', $jugadoresVallasTemporada8);
+        $this->smarty->assign('datosEquipoCampeon', $equiposCampeonesT8);
+        $this->smarty->assign('datosTemporada', $imagenCampeonesT8);
+        $this->smarty->assign('equipos', $equiposTemporadaT8);
         $this->smarty->display('templates/temporada8.tpl');
        }
 

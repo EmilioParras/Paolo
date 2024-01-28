@@ -157,7 +157,7 @@
         <div class="tablaFecha">
             <table>
                 <thead>
-                    <h2>Fecha 4</h2>
+                    <h2>Fecha 4 <img src="./images/fireBlue.png" style="height: 30px; margin-bottom:5px;"></h2>
                 </thead>
                 <tbody>
 
@@ -361,7 +361,7 @@
         <div class="tablaFecha">
             <table>
                 <thead>
-                    <h2>Fecha 8</h2>
+                    <h2>Fecha 8 <img src="./images/fireBlue.png" style="height: 30px; margin-bottom:5px;"><img src="./images/fireBlue.png" style="height: 30px; margin-bottom:5px;"></h2>
                 </thead>
                 <tbody>
 
@@ -412,7 +412,7 @@
         <div class="tablaFecha">
             <table>
                 <thead>
-                    <h2>Fecha 9</h2>
+                    <h2>Fecha 9<img src="./images/fireBlue.png" style="  margin-left:5px; height: 30px; margin-bottom:5px;"><img src="./images/fireBlue.png" style="height: 30px; margin-bottom:5px;"><img src="./images/fireBlue.png" style="height: 30px; margin-bottom:5px;"></h2>
                 </thead>
                 <tbody>
 

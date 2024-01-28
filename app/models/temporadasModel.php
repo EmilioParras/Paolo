@@ -52,9 +52,9 @@
         /*----------CONSULTAS PARA LA TEMPORADA 8-----------*/
 
         public function getImagenCampeonesT8() {
-            $query = $this->db->prepare("SELECT temporadas.ID_equipoCampeon, temporadas.imagenCampeones AS imagen_blob
+            $query = $this->db->prepare("SELECT temporadas.ID_equipoCampeon, temporadas.ID_division, temporadas.numeroTemporada, temporadas.imagenCampeones AS imagen_blob
                                         FROM temporadas
-                                        WHERE temporadas.numeroTemporada = 8");
+                                        WHERE temporadas.numeroTemporada = 8 AND temporadas.ID_division IN (1, 2, 3);");
             $query->execute([]);
 
             $equipoCampeon = $query->fetchAll(PDO::FETCH_OBJ);
@@ -68,30 +68,12 @@
         }
 
         public function getJugadoresCampeonesTemporada8() {
-            $query = $this->db->prepare("(SELECT *
-            FROM jugadores
-            JOIN jugadorxtemporada ON jugadorxtemporada.ID_Jugador = jugadores.ID
-            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo
-            JOIN temporadas ON temporadas.ID_equipoCampeon = equipos.ID_equipo
-            WHERE temporadas.numeroTemporada = 8 AND temporadas.ID_division = 1)
-            
-            UNION
-            
-            (SELECT *
-            FROM jugadores
-            JOIN jugadorxtemporada ON jugadorxtemporada.ID_Jugador = jugadores.ID
-            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo
-            JOIN temporadas ON temporadas.ID_equipoCampeon = equipos.ID_equipo
-            WHERE temporadas.numeroTemporada = 8 AND temporadas.ID_division = 2)
-            
-            UNION
-            
-            (SELECT *
-            FROM jugadores
-            JOIN jugadorxtemporada ON jugadorxtemporada.ID_Jugador = jugadores.ID
-            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo
-            JOIN temporadas ON temporadas.ID_equipoCampeon = equipos.ID_equipo
-            WHERE temporadas.numeroTemporada = 8 AND temporadas.ID_division = 3)");
+                $query = $this->db->prepare("SELECT jugadores.tag, jugadorxtemporada.ID_equipoTemporada, equipos.division
+                                            FROM jugadores
+                                            JOIN jugadorxtemporada ON jugadorxtemporada.ID_Jugador = jugadores.ID
+                                            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo
+                                            JOIN temporadas ON temporadas.ID_equipoCampeon = equipos.ID_equipo
+                                            WHERE temporadas.numeroTemporada = 8 AND temporadas.ID_division IN (1, 2, 3);");
             $query->execute([]);
 
             $equipoCampeon = $query->fetchAll(PDO::FETCH_OBJ);

@@ -8,7 +8,6 @@ require_once './app/views/generalView.php';
 
     public function __construct() {
         $this->generalView = new GeneralView();
-        
     }
 
     public function showInicio() {
@@ -17,6 +16,11 @@ require_once './app/views/generalView.php';
 
     public function showFaq() {
         $this->generalView->showFaq();
+    }
+
+    public function showFormato() {
+        $this->generalView->showFormato();
+
     }
 
 

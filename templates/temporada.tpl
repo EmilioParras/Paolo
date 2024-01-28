@@ -9,8 +9,9 @@
         <div class="divEquipoCampeon"> 
             <h1 style="font-size:56px; margin-bottom:10px;">Equipo Campeón</h1>
             {foreach from=$datosTemporada item=$imagen}
-                <img src="{$imagen->imagenCampeones}" style="height: 450px; width:520px;"></img>
+                <img src="{$imagen->imagenCampeones}" style="height: 50%; width:100%;"></img>
             {/foreach}
+            <h2 style="margin-top: 10px;">Campeones</h2>
             <div class="jugadoresCampeones">
                 {foreach from=$datosEquipoCampeon item=$info}
                     <p style="margin-top: 3px;">{$info->tag}</p>

@@ -90,7 +90,7 @@
         <div class="tablaFecha">
             <table>
                 <thead>
-                    <h2>Fecha 3</h2>
+                    <h2>Fecha 3 <img src="./images/fireBlue.png" style="height: 30px; margin-bottom:5px;"></h2>
                 </thead>
                 <tbody>
 

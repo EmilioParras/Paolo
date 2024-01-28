@@ -16,6 +16,10 @@ class GeneralView {
 
     public function showFaq() {
         $this->smarty->display('faq.tpl');
+    }
+
+    public function showFormato() {
+        $this->smarty->display('formato.tpl');
 
     }
     

@@ -10,20 +10,28 @@ class TablasView {
         $this->smarty = new Smarty();
     }
 
-    public function showTabla($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada) {
+    public function showTablaPrimera($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada) {
         $this->smarty->assign('jugadoresGoles', $golesTemporada);
         $this->smarty->assign('jugadoresAsistencias', $asistenciasTemporada);
         $this->smarty->assign('jugadoresVallas', $vallasTemporada);
         $this->smarty->assign('equipos', $equiposTemporada);
-        $this->smarty->display('templates/tablaActual.tpl');
+        $this->smarty->display('templates/tablaPrimera.tpl');
     }
 
-    public function showTablaPromesas($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada) {
+    public function showTablaSegunda($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada) {
         $this->smarty->assign('jugadoresGoles', $golesTemporada);
         $this->smarty->assign('jugadoresAsistencias', $asistenciasTemporada);
         $this->smarty->assign('jugadoresVallas', $vallasTemporada);
         $this->smarty->assign('equipos', $equiposTemporada);
-        $this->smarty->display('templates/tablaActual.tpl');
+        $this->smarty->display('templates/tablaSegunda.tpl');
+    }
+
+    public function showTablaTercera($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada) {
+        $this->smarty->assign('jugadoresGoles', $golesTemporada);
+        $this->smarty->assign('jugadoresAsistencias', $asistenciasTemporada);
+        $this->smarty->assign('jugadoresVallas', $vallasTemporada);
+        $this->smarty->assign('equipos', $equiposTemporada);
+        $this->smarty->display('templates/tablaTercera.tpl');
     }
 
    

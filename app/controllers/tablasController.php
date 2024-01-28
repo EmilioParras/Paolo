@@ -25,19 +25,19 @@ require_once './app/models/temporadasModel.php';
                 $golesTemporada = $this->jugadoresModel->getJugadoresTemporadaGolesConDivision(1);
                 $asistenciasTemporada = $this->jugadoresModel->getJugadoresTemporadaAsistenciasConDivision(1);
                 $vallasTemporada = $this->jugadoresModel->getJugadoresTemporadaVallasConDivision(1);
-                $this->tablasView->showTabla($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada);
+                $this->tablasView->showTablaPrimera($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada);
             } else if($id == 2) {
                 $equiposTemporada = $this->equiposModel->getEquiposTemporadaTabla(2);
                 $golesTemporada = $this->jugadoresModel->getJugadoresTemporadaGolesConDivision(2);
                 $asistenciasTemporada = $this->jugadoresModel->getJugadoresTemporadaAsistenciasConDivision(2);
                 $vallasTemporada = $this->jugadoresModel->getJugadoresTemporadaVallasConDivision(2);
-                $this->tablasView->showTabla($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada);
+                $this->tablasView->showTablaSegunda($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada);
             } else if ($id == 3){
                 $equiposTemporada = $this->equiposModel->getEquiposTemporadaTabla(3);
                 $golesTemporada = $this->jugadoresModel->getJugadoresTemporadaGolesConDivision(3);
                 $asistenciasTemporada = $this->jugadoresModel->getJugadoresTemporadaAsistenciasConDivision(3);
                 $vallasTemporada = $this->jugadoresModel->getJugadoresTemporadaVallasConDivision(3);
-                $this->tablasView->showTablaPromesas($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada);
+                $this->tablasView->showTablaTercera($equiposTemporada, $golesTemporada, $asistenciasTemporada, $vallasTemporada);
             }
         }
 

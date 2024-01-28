@@ -19,7 +19,7 @@
 .divHeader {
     padding: 50px;
     text-align: center;
-    background-color: #2B2E38 ;
+    background-color: #2B2E38;
 }
 
 .divHeader img {
@@ -63,46 +63,6 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     color: #2B2E38;
 }
 
-/*--------SECCION INICIO---------*/
-
- .divInicio {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-}
-
-.divJugadorGolFecha{
-    margin: 10px;
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-.h2JugadorGolFecha {
-    justify-content: center;
-    display: flex;
-    font-size: 23px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.divImgJugadorFecha{
-    display: flex;
-    justify-content: center;
-}
-
-.divPrincipalInicio{
-    padding: 10px;
-    background-color: red;
-}
-
-.divPolemicas {
-    margin: 10px;
-    background-color: yellow;
-}
-
-
-
-
 /*---------SECCION TABLAS----------*/
 
 .tituloTabla {
@@ -121,24 +81,26 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 
 .tablaPrincipal  table {
     height: 100%;
-    width: 100%;
-    pointer-events: none;
+    border: 3.5px solid #2B2E38;
+    background: #E5E5E5;
 }
 
 .tablaPrincipal th, .tablaPrincipal td {
-    border: 2px solid #2B2E38;
+    border: 3.5px solid #2B2E38;
     padding: 8px;
     text-align: center;
     font-size: 22px;
 }
 
 .tablaPrincipal tr:nth-child(even){
-    background: #FFFFFF;
+    background: #D5D5D5;
+    border: 3.5px solid #2B2E38;
 }
 
 .tablaPrincipal th {
     font-weight: bold;
     font-size: 16px;
+    border: 3.5px solid #2B2E38;
 }
 
 .tablaEstadisticas {
@@ -182,7 +144,7 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 .contenedorEquipos {
     text-align: center;
     align-items: center;
-    margin: 10px;
+    margin: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -222,6 +184,26 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
 .imgTemporada {
     width: auto;
     height: 60px;
+}
+
+/*---------SECCION T5----------*/
+
+.divTemporadaPrincipalT5 {
+    padding: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.contenedorEquiposT5 {
+    margin: 40px;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 /*----------SECCION TEMPORADA INDIVIDUAL----------*/
@@ -507,66 +489,36 @@ footer {
     width: auto;
 }
 
-/*---------SECCION FAQ----------*/
+/*---------FORMATO----------*/
 
-.grid-container-faq {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.divFaq {
-    background: black;
-    border: 1px solid #838383;
+.formatoHeader {
+    padding: 10px;
     text-align: center;
-    margin: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.imagenFaq {
-    border-radius: 10px;
-    width: 100%;
-    height: auto;
-}
-
-.contenidoOcultoFaq {
-    color: white;
-    max-width: 100%;
-    text-align: justify;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-}
-
-.botonFaq {
-    background-color: rgb(223, 223, 223);
-    color: #000000;
-    border: 1px solid #838383;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 10px;
-    height: 50px;
     font-size: 20px;
+    justify-content: center;
 }
 
-.active {
-    max-height: 100%;
+.formatoHeader h2 {
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.faq-container {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
+.contenedorFormato {
+    color: black;
+    padding: 20px;
 }
 
-.divFaq, .contenidoOcultoFaq {
-    margin: 0px;
-    background: black;
-    text-align: center;
+.infoPrimeraSegunda ul li {
+    list-style-type: disc;
 }
 
-.pContenidoFaq {
-    text-align: left;
-    display: flex;
-    margin: 15px;
+.infoTercera ul li {
+    list-style-type: disc;
 }
+
+.infoLigaH2{
+    text-decoration: underline;
+}
+
+/*---------FORMATO----------*/

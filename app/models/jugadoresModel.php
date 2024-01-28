@@ -187,7 +187,7 @@
          /*----------CONSULTAS PARA LA TEMPORADA 8-----------*/
 
          public function getJugadoresTemporada8() {
-            $query = $this->db->prepare("SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo, equipos.ID_temporadaDeJuego
+            $query = $this->db->prepare("SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo AS imagen_blob, equipos.ID_temporadaDeJuego
                                         FROM jugadorxtemporada
                                         JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
                                         JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
@@ -196,37 +196,14 @@
          }
 
         public function getJugadoresTemporada8Goles() {
-            $query = $this->db->prepare("(SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo, equipos.ID_temporadaDeJuego
-            FROM jugadorxtemporada
-            JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
-            JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
-            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo AND equipos.division = 1
-            WHERE temporadas.ID = 8
-            ORDER BY jugadorxtemporada.golesTemporada DESC
-            LIMIT 0,5)
-            
-            UNION
-            
-            (SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo, equipos.ID_temporadaDeJuego
-            FROM jugadorxtemporada
-            JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
-            JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
-            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo AND equipos.division = 2
-            WHERE temporadas.ID = 8
-            ORDER BY jugadorxtemporada.golesTemporada DESC
-            LIMIT 0,5)
-            
-            UNION
-            
-            (SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo, equipos.ID_temporadaDeJuego
-            FROM jugadorxtemporada
-            JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
-            JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
-            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo AND equipos.division = 3
-            WHERE temporadas.ID = 8
-            ORDER BY jugadorxtemporada.golesTemporada DESC
-            LIMIT 0,5);
-            ");
+            $query = $this->db->prepare("(SELECT jugadores.tag, jugadorxtemporada.golesTemporada, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo AS imagen_blob
+                                        FROM jugadorxtemporada
+                                        JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
+                                        JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
+                                        JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo AND equipos.division = 1
+                                        WHERE temporadas.ID = 8
+                                        ORDER BY jugadorxtemporada.golesTemporada DESC
+                                        LIMIT 0,5)");
             $query->execute([]);
 
             $jugadoresGolesTemporada8 = $query->fetchAll(PDO::FETCH_OBJ);
@@ -239,37 +216,14 @@
         }
 
         public function getJugadoresTemporada8Asistencias() {
-            $query = $this->db->prepare("(SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo, equipos.ID_temporadaDeJuego
-            FROM jugadorxtemporada
-            JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
-            JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
-            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo AND equipos.division = 1
-            WHERE temporadas.ID = 8
-            ORDER BY jugadorxtemporada.asistenciasTemporada DESC
-            LIMIT 0,5)
-            
-            UNION
-            
-            (SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo, equipos.ID_temporadaDeJuego
-            FROM jugadorxtemporada
-            JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
-            JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
-            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo AND equipos.division = 2
-            WHERE temporadas.ID = 8
-            ORDER BY jugadorxtemporada.asistenciasTemporada DESC
-            LIMIT 0,5)
-            
-            UNION
-            
-            (SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo, equipos.ID_temporadaDeJuego
-            FROM jugadorxtemporada
-            JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
-            JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
-            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo AND equipos.division = 3
-            WHERE temporadas.ID = 8
-            ORDER BY jugadorxtemporada.asistenciasTemporada DESC
-            LIMIT 0,5);
-            ");
+            $query = $this->db->prepare("(SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo AS imagen_blob, equipos.ID_temporadaDeJuego
+                                        FROM jugadorxtemporada
+                                        JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
+                                        JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
+                                        JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo AND equipos.division = 1
+                                        WHERE temporadas.ID = 8
+                                        ORDER BY jugadorxtemporada.asistenciasTemporada DESC
+                                        LIMIT 0,5)");
             $query->execute([]);
 
             $jugadoresAsistenciasTemporada8 = $query->fetchAll(PDO::FETCH_OBJ);
@@ -282,37 +236,14 @@
         }
 
         public function getJugadoresTemporada8Vallas() {
-            $query = $this->db->prepare("(SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo, equipos.ID_temporadaDeJuego
-            FROM jugadorxtemporada
-            JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
-            JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
-            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo AND equipos.division = 1
-            WHERE temporadas.ID = 8
-            ORDER BY jugadorxtemporada.vallasTemporada DESC
-            LIMIT 0,5)
-            
-            UNION
-            
-            (SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo, equipos.ID_temporadaDeJuego
-            FROM jugadorxtemporada
-            JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
-            JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
-            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo AND equipos.division = 2
-            WHERE temporadas.ID = 8
-            ORDER BY jugadorxtemporada.vallasTemporada DESC
-            LIMIT 0,5)
-            
-            UNION
-            
-            (SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo, equipos.ID_temporadaDeJuego
-            FROM jugadorxtemporada
-            JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
-            JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
-            JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo AND equipos.division = 3
-            WHERE temporadas.ID = 8
-            ORDER BY jugadorxtemporada.vallasTemporada DESC
-            LIMIT 0,5);
-            ");
+            $query = $this->db->prepare("(SELECT jugadorxtemporada.*, jugadores.tag, equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo AS imagen_blob, equipos.ID_temporadaDeJuego
+                                        FROM jugadorxtemporada
+                                        JOIN jugadores ON jugadorxtemporada.ID_jugador = jugadores.ID
+                                        JOIN temporadas ON jugadorxtemporada.ID_Temporada = temporadas.ID
+                                        JOIN equipos ON jugadorxtemporada.ID_equipoTemporada = equipos.ID_equipo AND equipos.division = 1
+                                        WHERE temporadas.ID = 8
+                                        ORDER BY jugadorxtemporada.vallasTemporada DESC
+                                        LIMIT 0,5)");
             $query->execute([]);
 
             $jugadoresVallasTemporada8 = $query->fetchAll(PDO::FETCH_OBJ);
@@ -320,7 +251,7 @@
             foreach ($jugadoresVallasTemporada8 as $imagen) {
                 $imagenBase64 = base64_encode($imagen->imagen_blob);
                 $imagen->escudoEquipo = 'data:image/png;base64,' . $imagenBase64;
-            }
+            }   
             return $jugadoresVallasTemporada8;
         }
 

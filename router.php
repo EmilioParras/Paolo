@@ -13,10 +13,6 @@ if (!empty($_GET['action'])) {
 $params = explode('/', $action);
 
 switch ($params[0]) {
-    /*case 'inicio' :
-        $generalController = new GeneralController();
-        $generalController->showInicio();
-        break;*/
     case 'tabla' :
         $tablasController = new TablasController();
         $id = $params [1];
@@ -31,9 +27,9 @@ switch ($params[0]) {
         $id = $params[1];
         $temporadasController->showDatosTemporadaById($id);
         break;
-    case 'temporada/8' :
-        $temporadasController= new TemporadasController();
-        $temporadasController->showDatosTemporada8();
+    case 'formato' : 
+        $generalController = new GeneralController();
+        $generalController->showFormato();
         break;    
     case 'equipo' :
         $temporadasController = new TemporadasController();

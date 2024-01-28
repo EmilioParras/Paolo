@@ -44,6 +44,9 @@
                     <li>
                         <a href="temporadas">TEMPORADAS</a>
                     </li>
+                    <li>
+                        <a href="formato">FORMATO</a>
+                    </li>
                 </ul>
             </nav>
     </div>

@@ -8,8 +8,9 @@
         <a href="temporada/3" class="hrefTemporada"><button class="btnTemporada">Temporada 3 <img src="./images/imgTematicaTemporadas/championsT3.png" class="imgTemporada"></button></a>
         <a href="temporada/4" class="hrefTemporada"><button class="btnTemporada">Temporada 4 <img src="./images/imgTematicaTemporadas/copaAmericaT4.png" class="imgTemporada"></button></a>
         <a href="temporada/5" class="hrefTemporada"><button class="btnTemporada">Temporada 5 <img src="./images/imgTematicaTemporadas/mundialT5.png" class="imgTemporada"></button></a>
-        <a href="temporada/6" class="hrefTemporada"><button class="btnTemporada">Temporada 6 <img src="./images/imgTematicaTemporadas/premierLeagueT6.jpg" class="imgTemporada"></button></a>
-        <a href="temporada/8" class="hrefTemporada"><button class="btnTemporada">Temporada 8 <img src="./images/imgTematicaTemporadas/lpfT7-8.png" class="imgTemporada"></button></a>
+        <a href="temporada/6" class="hrefTemporada"><button class="btnTemporada">Temporada 6 <img src="./images/imgTematicaTemporadas/logoPremier.png" class="imgTemporada"></button></a>
+        <a href="#" class="hrefTemporada"><button class="btnTemporada">Temporada 7 (En desarrollo) <img src="./images/imgTematicaTemporadas/lpft7-8.png" class="imgTemporada"></button></a>
+        <a href="#" class="hrefTemporada"><button class="btnTemporada">Temporada 8 (En desarrollo) <img src="./images/imgTematicaTemporadas/lpfT7-8.png" class="imgTemporada"></button></a>
     </div>
     
 </main> 

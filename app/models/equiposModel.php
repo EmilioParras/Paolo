@@ -9,7 +9,7 @@
         }
 
         public function getEquiposTemporadaTabla($num) {
-            $query = $this->db->prepare("SELECT equipos.*, temporadas.*, equipos.escudoEquipo AS imagen_blob
+            $query = $this->db->prepare("SELECT equipos.*, equipos.escudoEquipo AS imagen_blob
                                         FROM equipos
                                         JOIN temporadas ON equipos.ID_temporadaDeJuego = temporadas.ID 
                                         WHERE temporadas.ID = 9 AND equipos.division = ?
@@ -71,16 +71,21 @@
 
          /*----------CONSULTAS PARA LA TEMPORADA 8-----------*/
 
-        public function getEquiposTemporadabyIdT8($temporada) {
-            $query = $this->db->prepare ("SELECT *
+         public function getEquiposTemporadabyIdT8() {
+            $query = $this->db->prepare("SELECT equipos.ID_equipo, equipos.nombre, equipos.division, equipos.escudoEquipo AS imagen_blob, equipos.ID_temporadaDeJuego 
                                         FROM equipos
-                                        JOIN temporadas
-                                        ON equipos.ID_temporadaDeJuego = temporadas.ID
-                                        JOIN divisiones
-                                        ON equipos.division = divisiones.numDivision
+                                        JOIN temporadas ON equipos.ID_temporadaDeJuego = temporadas.ID
+                                        JOIN divisiones ON equipos.division = divisiones.numDivision
                                         WHERE temporadas.ID = 8");
-            $query->execute($temporada);
+        
+            $query->execute();
             $equiposTemporadaDivision = $query->fetchAll(PDO::FETCH_OBJ);
+        
+            foreach ($equiposTemporadaDivision as $equipo) {
+                $imagenBase64 = base64_encode($equipo->imagen_blob);
+                $equipo->escudoEquipo = 'data:image/png;base64,' . $imagenBase64;
+            }
+        
             return $equiposTemporadaDivision;
         }
         
