@@ -4,9 +4,10 @@
     <div class="formatoHeader">
         <img width="auto" height="auto" src="./images/THESUPERLEAGUE.png" alt="icono">
         <h1>The Super League</h1>
+        <h3>2024</h3>
     </div>
 
-    <div class="infoPrimeraSegunda">
+    <div class="infoPrimeraSegundaTercera">
         <h2 class="infoLigaH2">PRIMERA Y SEGUNDA DIVISIÓN</h2>
         <br>
         <ul>
@@ -19,7 +20,7 @@
         </ul>
     </div>
     <br>
-    <div class="infoTercera">
+    <div class="infoPrimeraSegundaTercera">
         <h2 class="infoLigaH2">TERCERA DIVISIÓN</h2>
         <br>
         <ul>
@@ -31,9 +32,9 @@
                 </ul>
             </li>
             <br>
-            <li>Este formato ofrece oportunidades de ascenso a todos los equipos, incluso al último. Habrá mercado de pases a mitad de liga.<li>
+            <li>Este formato ofrece oportunidades de ascenso a todos los equipos, incluso al último. Habrá mercado de pases a mitad de liga.</li>
         </ul>
     </div>
 </div>
 
-{include file="footer.tpl"}
+{include file="footerFormato.tpl"}

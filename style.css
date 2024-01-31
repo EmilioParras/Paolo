@@ -78,6 +78,9 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     width: 100%;
 }
     
+.tablaPrincipal img {
+    pointer-events: none;
+}
 
 .tablaPrincipal  table {
     height: 100%;
@@ -109,11 +112,25 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     border-collapse: collapse;
 }
 
+.tablaEstadisticas img {
+    pointer-events: none;
+}
+
 .tablaEstadisticas th, .tablaEstadisticas td {
-    border: 1px solid black;
+    border: 3.5px solid #2B2E38;
     padding: 8px;
     text-align: center;
     font-size: 20px;
+}
+
+.tablaEstadisticas .tituloTabla {
+    color: white;
+    font-weight: bold;
+}
+
+.tablaEstadisticas tr {
+    background-color: #1F2029;
+    color: #FFEBA7;
 }
 
 .contenedorTablas {
@@ -164,21 +181,32 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     gap: 20px; 
 }
 
+.containerTemporadas img {
+    pointer-events: none;
+}
+
 .hrefTemporada{
-    background-color: #222429;
+    background-color: #2B2E38;
     text-decoration: none;
     justify-content: center;
     display: flex;
     padding: 15px;
-    font-size: 36px;
     border-radius: 10px;
+    box-shadow: 7px 7px 5px rgba(192, 191, 191, 0.5);
+}
+
+.btnTemporada:hover {
+    /*box-shadow: 10px 10px 5px rgba(192, 191, 191, 0.5);*/
+    font-size: 28px;
+    transition-duration: 0.75s;
 }
 
 .btnTemporada{
-    background-color: #222429;
+    background-color: #2B2E38;
     border: 0px;
     text-decoration: none;
-    color: white;
+    color: #FFEBA7;
+    font-size: 24px;
 }
 
 .imgTemporada {
@@ -225,6 +253,10 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     justify-content: center; 
 }
 
+.divEquipoCampeon img {
+    pointer-events: none;
+}
+
 .jugadoresCampeones{
     font-size: 25px;
     display: grid;
@@ -256,6 +288,10 @@ ul.itemsBarraNavegacion li a, a.dropdown-toggle {
     justify-content: center;
     display: grid;
     grid-template-columns: 30% 30% 30%;
+}
+
+.grid-container img {
+    pointer-events: none;
 }
 
 .tablaFecha {
@@ -325,6 +361,7 @@ table {
     text-align: center;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
 }
 
 .imagenEquipo {
@@ -402,8 +439,15 @@ footer {
     width: 100%;
     background: #1F2029;
     background: linear-gradient(360deg, #1F2029 75%, white 450%);
-    padding: 15px;
-    margin-top: 60px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footerFormato {
+    width: 100%;
+    background: linear-gradient(360deg, #1F2029 75%, beige 600%);
+    padding: 20px;
+    margin-top: 0;
 }
 
 .containerFooter {
@@ -416,6 +460,7 @@ footer {
     padding: 20px;
     text-align: start;
     display: flex;
+    pointer-events: none;
 }
 
 .h3Footer {
@@ -423,6 +468,8 @@ footer {
     font-weight: bold;
     font-size: 17px;
 }
+
+/*----------ESTILOS FOOTER----------*/
 
 .h3Titulo{
     color: white;
@@ -460,6 +507,7 @@ footer {
     list-style: none;
     padding: 0;
     color: #FFEBA7;
+    pointer-events: none;
 }
 
 .footer-menu-credits li {
@@ -487,6 +535,7 @@ footer {
 .sponsors img {
     height: 105px;
     width: auto;
+    pointer-events: none;
 }
 
 /*---------FORMATO----------*/
@@ -498,27 +547,80 @@ footer {
     justify-content: center;
 }
 
+.formatoHeader img {
+    pointer-events: none;
+}
+
+.formatoHeader:hover {
+    color: #FFEBA7;
+    transition-duration: 0.75s;
+}
+
 .formatoHeader h2 {
-    text-decoration: underline;
     font-size: 18px;
     font-weight: bold;
+    color: white;
 }
 
 .contenedorFormato {
     color: black;
-    padding: 20px;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: #2B2E38;
 }
 
-.infoPrimeraSegunda ul li {
+.infoPrimeraSegundaTercera {
+    user-select: all;
+    color: beige;
+}
+
+.infoPrimeraSegundaTercera ul li {
     list-style-type: disc;
 }
 
-.infoTercera ul li {
-    list-style-type: disc;
-}
-
-.infoLigaH2{
-    text-decoration: underline;
+.infoLigaH2 {
+    margin: -10px;
+    font-size: 17px;
+    color: #FFEBA7;
 }
 
 /*---------FORMATO----------*/
+
+/*---------FECHAS NO DISPONBILES----------*/
+
+.fechasNoDisponibles {
+    margin-top: 10vh;
+    font-size: 1em;
+    border-radius: 10px;
+    padding: 1em 4.25em 1.25em;
+    color: #ffffff;
+    background-color: #b41414;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 5px rgba(192, 191, 191, 0.5);
+  }
+
+  .fechasNoDisponibles h2 {
+    font-size: 1.4em;
+    font-weight: normal;
+    margin: 0 0 0.6em;
+    opacity: 0.95;
+  }
+  
+  .fechasNoDisponibles p {
+    font-size: 1.0em;
+    margin: 0 0 0.5em;
+    opacity: 0.85;
+  }
+  
+  .fechasNoDisponibles:before {
+    content: ':(';
+    float: right;
+    font-size: 2.5em;
+    padding: 0.15em 0.3em;
+    font-weight: bold;
+  }
+
+/*---------FECHAS NO DISPONBILES----------*/

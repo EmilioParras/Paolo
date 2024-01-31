@@ -40,7 +40,8 @@ switch ($params[0]) {
         $temporadasController = new TemporadasController();
         $idTemporada = $params[1];
         $idEquipo = $params[2];
-        $temporadasController->showEquipoPasado($idTemporada,$idEquipo );    
+        $temporadasController->showEquipoPasado($idTemporada,$idEquipo);  
+        break;  
     case 'fechas' :
         $temporadasController = new TemporadasController();
         $id = $params[1];
